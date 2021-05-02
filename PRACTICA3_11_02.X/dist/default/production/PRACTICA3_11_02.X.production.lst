@@ -1,0 +1,799 @@
+
+
+Microchip MPLAB XC8 Assembler V2.05 build -831301201 
+                                                                                               Mon Feb 11 22:33:51 2019
+
+Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
+     1                           	processor	18F4550
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	flic
+     5                           	psect	idataCOMRAM,global,class=CODE,delta=1,noexec
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	dataCOMRAM,global,class=COMRAM,space=1,delta=1,noexec
+     8                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,noexec
+     9                           	psect	text0,global,reloc=2,class=CODE,delta=1
+    10                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    11                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    12  0000                     
+    13                           ; Version 2.05
+    14                           ; Generated 20/12/2018 GMT
+    15                           ; 
+    16                           ; Copyright © 2018, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    17                           ; All rights reserved.
+    18                           ; 
+    19                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    20                           ; 
+    21                           ; Redistribution and use in source and binary forms, with or without modification, are
+    22                           ; permitted provided that the following conditions are met:
+    23                           ; 
+    24                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    25                           ;        conditions and the following disclaimer.
+    26                           ; 
+    27                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    28                           ;        of conditions and the following disclaimer in the documentation and/or other
+    29                           ;        materials provided with the distribution.
+    30                           ; 
+    31                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    32                           ;        software without specific prior written permission.
+    33                           ; 
+    34                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    35                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    36                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    37                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    38                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    39                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    40                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    41                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    42                           ; 
+    43                           ; 
+    44                           ; Code-generator required, PIC18F4550 Definitions
+    45                           ; 
+    46                           ; SFR Addresses
+    47  0000                     
+    48                           	psect	idataCOMRAM
+    49  007DB9                     __pidataCOMRAM:
+    50                           	opt callstack 0
+    51                           
+    52                           ;initializer for _codigo
+    53  007DB9  6D                 	db	109
+    54  007DBA  06                 	db	6
+    55  007DBB  5B                 	db	91
+    56  007DBC  7E                 	db	126
+    57  007DBD  7F                 	db	127
+    58  007DBE  79                 	db	121
+    59  007DBF  06                 	db	6
+    60  007DC0  5F                 	db	95
+    61  007DC1  5F                 	db	95
+    62                           
+    63                           ;initializer for _Nombre
+    64  007DC2  4F                 	db	79
+    65  007DC3  15                 	db	21
+    66  007DC4  15                 	db	21
+    67  007DC5  77                 	db	119
+    68  007DC6  15                 	db	21
+    69  007DC7  3E                 	db	62
+    70  007DC8  4F                 	db	79
+    71  007DC9  0E                 	db	14
+    72                           
+    73                           ;initializer for _sorpresa
+    74  007DCA  40                 	db	64
+    75  007DCB  60                 	db	96
+    76  007DCC  70                 	db	112
+    77  007DCD  78                 	db	120
+    78  007DCE  7C                 	db	124
+    79  007DCF  7E                 	db	126
+    80  0000                     _PORTD	set	3971
+    81  0000                     _PORTBbits	set	3969
+    82  0000                     _TRISBbits	set	3987
+    83  0000                     _TRISD	set	3989
+    84                           
+    85                           ; #config settings
+    86  0000                     
+    87                           	psect	cinit
+    88  007DD0                     __pcinit:
+    89                           	opt callstack 0
+    90  007DD0                     start_initialization:
+    91                           	opt callstack 0
+    92  007DD0                     __initialization:
+    93                           	opt callstack 0
+    94                           
+    95                           ; Initialize objects allocated to COMRAM (23 bytes)
+    96                           ; load TBLPTR registers with __pidataCOMRAM
+    97  007DD0  0EB9               	movlw	low __pidataCOMRAM
+    98  007DD2  6EF6               	movwf	tblptrl,c
+    99  007DD4  0E7D               	movlw	high __pidataCOMRAM
+   100  007DD6  6EF7               	movwf	tblptrh,c
+   101  007DD8  0E00               	movlw	low (__pidataCOMRAM shr (0+16))
+   102  007DDA  6EF8               	movwf	tblptru,c
+   103  007DDC  EE00  F001         	lfsr	0,__pdataCOMRAM
+   104  007DE0  EE10 F017          	lfsr	1,23
+   105  007DE4                     copy_data0:
+   106  007DE4  0009               	tblrd		*+
+   107  007DE6  CFF5 FFEE          	movff	tablat,postinc0
+   108  007DEA  50E5               	movf	postdec1,w,c
+   109  007DEC  50E1               	movf	fsr1l,w,c
+   110  007DEE  E1FA               	bnz	copy_data0
+   111  007DF0                     end_of_initialization:
+   112                           	opt callstack 0
+   113  007DF0                     __end_of__initialization:
+   114                           	opt callstack 0
+   115  007DF0  0E00               	movlw	low (__Lmediumconst shr (0+16))
+   116  007DF2  6EF8               	movwf	tblptru,c
+   117  007DF4  0100               	movlb	0
+   118  007DF6  EFFD  F03E         	goto	_main	;jump to C main() function
+   119                           
+   120                           	psect	dataCOMRAM
+   121  000001                     __pdataCOMRAM:
+   122                           	opt callstack 0
+   123  000001                     _codigo:
+   124                           	opt callstack 0
+   125  000001                     	ds	9
+   126  00000A                     _Nombre:
+   127                           	opt callstack 0
+   128  00000A                     	ds	8
+   129  000012                     _sorpresa:
+   130                           	opt callstack 0
+   131  000012                     	ds	6
+   132                           
+   133                           	psect	cstackCOMRAM
+   134  000018                     __pcstackCOMRAM:
+   135                           	opt callstack 0
+   136  000018                     ??_main:
+   137                           
+   138                           ; 1 bytes @ 0x0
+   139  000018                     	ds	2
+   140  00001A                     main@sel:
+   141                           	opt callstack 0
+   142                           
+   143                           ; 2 bytes @ 0x2
+   144  00001A                     	ds	2
+   145  00001C                     main@out:
+   146                           	opt callstack 0
+   147                           
+   148                           ; 2 bytes @ 0x4
+   149  00001C                     	ds	2
+   150  00001E                     main@contador:
+   151                           	opt callstack 0
+   152                           
+   153                           ; 2 bytes @ 0x6
+   154  00001E                     	ds	2
+   155                           
+   156 ;;
+   157 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+   158 ;;
+   159 ;; *************** function _main *****************
+   160 ;; Defined at:
+   161 ;;		line 16 in file "Practica3_01__11_02_19.c"
+   162 ;; Parameters:    Size  Location     Type
+   163 ;;		None
+   164 ;; Auto vars:     Size  Location     Type
+   165 ;;  contador        2    6[COMRAM] short 
+   166 ;;  out             2    4[COMRAM] short 
+   167 ;;  sel             2    2[COMRAM] short 
+   168 ;; Return value:  Size  Location     Type
+   169 ;;                  1    wreg      void 
+   170 ;; Registers used:
+   171 ;;		wreg, fsr2l, fsr2h, status,2, status,0
+   172 ;; Tracked objects:
+   173 ;;		On entry : 0/0
+   174 ;;		On exit  : 0/0
+   175 ;;		Unchanged: 0/0
+   176 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   177 ;;      Params:         0       0       0       0       0       0       0       0       0
+   178 ;;      Locals:         6       0       0       0       0       0       0       0       0
+   179 ;;      Temps:          2       0       0       0       0       0       0       0       0
+   180 ;;      Totals:         8       0       0       0       0       0       0       0       0
+   181 ;;Total ram usage:        8 bytes
+   182 ;; This function calls:
+   183 ;;		Nothing
+   184 ;; This function is called by:
+   185 ;;		Startup code after reset
+   186 ;; This function uses a non-reentrant model
+   187 ;;
+   188                           
+   189                           	psect	text0
+   190  007DFA                     __ptext0:
+   191                           	opt callstack 0
+   192  007DFA                     _main:
+   193                           	opt callstack 31
+   194                           
+   195                           ;Practica3_01__11_02_19.c: 17:     TRISD=0x00;
+   196                           
+   197                           ;incstack = 0
+   198  007DFA  0E00               	movlw	0
+   199  007DFC  6E95               	movwf	3989,c	;volatile
+   200                           
+   201                           ;Practica3_01__11_02_19.c: 18:     TRISBbits.TRISB0=1;
+   202  007DFE  8093               	bsf	3987,0,c	;volatile
+   203                           
+   204                           ;Practica3_01__11_02_19.c: 19:     TRISBbits.TRISB1=1;
+   205  007E00  8293               	bsf	3987,1,c	;volatile
+   206                           
+   207                           ;Practica3_01__11_02_19.c: 20:     TRISBbits.TRISB2=1;
+   208  007E02  8493               	bsf	3987,2,c	;volatile
+   209                           
+   210                           ;Practica3_01__11_02_19.c: 21:     short int contador;;Practica3_01__11_02_19.c: 22:    
+      +                           short int sel=0;
+   211  007E04  0E00               	movlw	0
+   212  007E06  6E1B               	movwf	main@sel+1,c
+   213  007E08  0E00               	movlw	0
+   214  007E0A  6E1A               	movwf	main@sel,c
+   215                           
+   216                           ;Practica3_01__11_02_19.c: 24:     PORTBbits.RB0=0;
+   217  007E0C  9081               	bcf	3969,0,c	;volatile
+   218                           
+   219                           ;Practica3_01__11_02_19.c: 25:     PORTBbits.RB1=0;
+   220  007E0E  9281               	bcf	3969,1,c	;volatile
+   221                           
+   222                           ;Practica3_01__11_02_19.c: 26:     PORTBbits.RB2=0;
+   223  007E10  9481               	bcf	3969,2,c	;volatile
+   224                           
+   225                           ;Practica3_01__11_02_19.c: 27:     PORTD=0x00;
+   226  007E12  0E00               	movlw	0
+   227  007E14  6E83               	movwf	3971,c	;volatile
+   228  007E16                     l746:
+   229                           
+   230                           ;Practica3_01__11_02_19.c: 31:         if(PORTBbits.RB0==0 && PORTBbits.RB1==1 && PORTBb
+      +                          its.RB2==1){sel=1;}
+   231  007E16  A081               	btfss	3969,0,c	;volatile
+   232  007E18  A281               	btfss	3969,1,c	;volatile
+   233  007E1A  D006               	goto	l754
+   234  007E1C  A481               	btfss	3969,2,c	;volatile
+   235  007E1E  D004               	goto	l754
+   236  007E20  0E00               	movlw	0
+   237  007E22  6E1B               	movwf	main@sel+1,c
+   238  007E24  0E01               	movlw	1
+   239  007E26  6E1A               	movwf	main@sel,c
+   240  007E28                     l754:
+   241                           
+   242                           ;Practica3_01__11_02_19.c: 32:         if(PORTBbits.RB0==1 && PORTBbits.RB1==0 && PORTBb
+      +                          its.RB2==1){sel=2;}
+   243  007E28  B081               	btfsc	3969,0,c	;volatile
+   244  007E2A  B281               	btfsc	3969,1,c	;volatile
+   245  007E2C  D006               	goto	l762
+   246  007E2E  A481               	btfss	3969,2,c	;volatile
+   247  007E30  D004               	goto	l762
+   248  007E32  0E00               	movlw	0
+   249  007E34  6E1B               	movwf	main@sel+1,c
+   250  007E36  0E02               	movlw	2
+   251  007E38  6E1A               	movwf	main@sel,c
+   252  007E3A                     l762:
+   253                           
+   254                           ;Practica3_01__11_02_19.c: 33:         if(PORTBbits.RB0==1 && PORTBbits.RB1==1 && PORTBb
+      +                          its.RB2==0){sel=3;}
+   255  007E3A  B081               	btfsc	3969,0,c	;volatile
+   256  007E3C  A281               	btfss	3969,1,c	;volatile
+   257  007E3E  D0CD               	goto	l866
+   258  007E40  B481               	btfsc	3969,2,c	;volatile
+   259  007E42  D0CB               	goto	l866
+   260  007E44  0E00               	movlw	0
+   261  007E46  6E1B               	movwf	main@sel+1,c
+   262  007E48  0E03               	movlw	3
+   263  007E4A  6E1A               	movwf	main@sel,c
+   264  007E4C  D0C6               	goto	l866
+   265  007E4E                     l770:
+   266  007E4E  0E00               	movlw	0
+   267  007E50  6E1D               	movwf	main@out+1,c
+   268  007E52  0E00               	movlw	0
+   269  007E54  6E1C               	movwf	main@out,c
+   270  007E56                     l27:
+   271                           
+   272                           ;Practica3_01__11_02_19.c: 37:                     for(contador=0;contador<8;contador++)
+      +                          {
+   273  007E56  0E00               	movlw	0
+   274  007E58  6E1F               	movwf	main@contador+1,c
+   275  007E5A  0E00               	movlw	0
+   276  007E5C  6E1E               	movwf	main@contador,c
+   277  007E5E                     l776:
+   278                           
+   279                           ;Practica3_01__11_02_19.c: 38:                         PORTD=Nombre[contador];
+   280  007E5E  0E0A               	movlw	low _Nombre
+   281  007E60  241E               	addwf	main@contador,w,c
+   282  007E62  6ED9               	movwf	fsr2l,c
+   283  007E64  0E00               	movlw	high _Nombre
+   284  007E66  201F               	addwfc	main@contador+1,w,c
+   285  007E68  6EDA               	movwf	fsr2h,c
+   286  007E6A  50DF               	movf	indf2,w,c
+   287  007E6C  6E83               	movwf	3971,c	;volatile
+   288                           
+   289                           ;Practica3_01__11_02_19.c: 39:                         _delay((unsigned long)((1000)*(80
+      +                          00000/4000.0)));
+   290  007E6E  0E0B               	movlw	11
+   291  007E70  6E19               	movwf	(??_main+1)& (0+255),c
+   292  007E72  0E26               	movlw	38
+   293  007E74  6E18               	movwf	??_main& (0+255),c
+   294  007E76  0E5E               	movlw	94
+   295  007E78                     u347:
+   296  007E78  2EE8               	decfsz	wreg,f,c
+   297  007E7A  D7FE               	bra	u347
+   298  007E7C  2E18               	decfsz	??_main& (0+255),f,c
+   299  007E7E  D7FC               	bra	u347
+   300  007E80  2E19               	decfsz	(??_main+1)& (0+255),f,c
+   301  007E82  D7FA               	bra	u347
+   302                           
+   303                           ;Practica3_01__11_02_19.c: 40:                         if(PORTBbits.RB0==1 && PORTBbits.
+      +                          RB1==0 && PORTBbits.RB2==1){
+   304  007E84  B081               	btfsc	3969,0,c	;volatile
+   305  007E86  B281               	btfsc	3969,1,c	;volatile
+   306  007E88  D006               	goto	l30
+   307  007E8A  A481               	btfss	3969,2,c	;volatile
+   308  007E8C  D004               	goto	l30
+   309                           
+   310                           ;Practica3_01__11_02_19.c: 41:                             sel=2;
+   311  007E8E  0E00               	movlw	0
+   312  007E90  6E1B               	movwf	main@sel+1,c
+   313  007E92  0E02               	movlw	2
+   314  007E94  D008               	goto	L1
+   315  007E96                     l30:
+   316                           
+   317                           ;Practica3_01__11_02_19.c: 45:                         if(PORTBbits.RB0==1 && PORTBbits.
+      +                          RB1==1 && PORTBbits.RB2==0){
+   318  007E96  B081               	btfsc	3969,0,c	;volatile
+   319  007E98  A281               	btfss	3969,1,c	;volatile
+   320  007E9A  D00B               	goto	l794
+   321  007E9C  B481               	btfsc	3969,2,c	;volatile
+   322  007E9E  D009               	goto	l794
+   323                           
+   324                           ;Practica3_01__11_02_19.c: 46:                             sel=3;
+   325  007EA0  0E00               	movlw	0
+   326  007EA2  6E1B               	movwf	main@sel+1,c
+   327  007EA4  0E03               	movlw	3
+   328  007EA6                     L1:
+   329  007EA6  6E1A               	movwf	main@sel,c
+   330                           
+   331                           ;Practica3_01__11_02_19.c: 47:                             out=1;
+   332  007EA8  0E00               	movlw	0
+   333  007EAA  6E1D               	movwf	main@out+1,c
+   334  007EAC  0E01               	movlw	1
+   335  007EAE  6E1C               	movwf	main@out,c
+   336                           
+   337                           ;Practica3_01__11_02_19.c: 48:                             break;
+   338  007EB0  D00A               	goto	u160
+   339  007EB2                     l794:
+   340                           
+   341                           ;Practica3_01__11_02_19.c: 50:                     }if(out==1)break;
+   342  007EB2  4A1E               	infsnz	main@contador,f,c
+   343  007EB4  2A1F               	incf	main@contador+1,f,c
+   344  007EB6  BE1F               	btfsc	main@contador+1,7,c
+   345  007EB8  D7D2               	goto	l776
+   346  007EBA  501F               	movf	main@contador+1,w,c
+   347  007EBC  E104               	bnz	u160
+   348  007EBE  0E08               	movlw	8
+   349  007EC0  5C1E               	subwf	main@contador,w,c
+   350  007EC2  A0D8               	btfss	status,0,c
+   351  007EC4  D7CC               	goto	l776
+   352  007EC6                     u160:
+   353  007EC6  041C               	decf	main@out,w,c
+   354  007EC8  101D               	iorwf	main@out+1,w,c
+   355  007ECA  B4D8               	btfsc	status,2,c
+   356  007ECC  D7A4               	goto	l746
+   357  007ECE  D7C3               	goto	l27
+   358  007ED0                     l802:
+   359  007ED0  0E00               	movlw	0
+   360  007ED2  6E1D               	movwf	main@out+1,c
+   361  007ED4  0E00               	movlw	0
+   362  007ED6  6E1C               	movwf	main@out,c
+   363  007ED8                     l37:
+   364  007ED8  0E00               	movlw	0
+   365  007EDA  6E1B               	movwf	main@sel+1,c
+   366  007EDC  0E00               	movlw	0
+   367  007EDE  6E1A               	movwf	main@sel,c
+   368                           
+   369                           ;Practica3_01__11_02_19.c: 56:                     for(contador=0;contador<9;contador++)
+      +                          {
+   370  007EE0  0E00               	movlw	0
+   371  007EE2  6E1F               	movwf	main@contador+1,c
+   372  007EE4  0E00               	movlw	0
+   373  007EE6  6E1E               	movwf	main@contador,c
+   374  007EE8                     l808:
+   375                           
+   376                           ;Practica3_01__11_02_19.c: 57:                         PORTD=codigo[contador];
+   377  007EE8  0E01               	movlw	low _codigo
+   378  007EEA  241E               	addwf	main@contador,w,c
+   379  007EEC  6ED9               	movwf	fsr2l,c
+   380  007EEE  0E00               	movlw	high _codigo
+   381  007EF0  201F               	addwfc	main@contador+1,w,c
+   382  007EF2  6EDA               	movwf	fsr2h,c
+   383  007EF4  50DF               	movf	indf2,w,c
+   384  007EF6  6E83               	movwf	3971,c	;volatile
+   385                           
+   386                           ;Practica3_01__11_02_19.c: 58:                         _delay((unsigned long)((1000)*(80
+      +                          00000/4000.0)));
+   387  007EF8  0E0B               	movlw	11
+   388  007EFA  6E19               	movwf	(??_main+1)& (0+255),c
+   389  007EFC  0E26               	movlw	38
+   390  007EFE  6E18               	movwf	??_main& (0+255),c
+   391  007F00  0E5E               	movlw	94
+   392  007F02                     u357:
+   393  007F02  2EE8               	decfsz	wreg,f,c
+   394  007F04  D7FE               	bra	u357
+   395  007F06  2E18               	decfsz	??_main& (0+255),f,c
+   396  007F08  D7FC               	bra	u357
+   397  007F0A  2E19               	decfsz	(??_main+1)& (0+255),f,c
+   398  007F0C  D7FA               	bra	u357
+   399                           
+   400                           ;Practica3_01__11_02_19.c: 59:                         if(PORTBbits.RB0==0 && PORTBbits.
+      +                          RB1==1 && PORTBbits.RB2==1){
+   401  007F0E  A081               	btfss	3969,0,c	;volatile
+   402  007F10  A281               	btfss	3969,1,c	;volatile
+   403  007F12  D006               	goto	l40
+   404  007F14  A481               	btfss	3969,2,c	;volatile
+   405  007F16  D004               	goto	l40
+   406                           
+   407                           ;Practica3_01__11_02_19.c: 60:                             sel=1;
+   408  007F18  0E00               	movlw	0
+   409  007F1A  6E1B               	movwf	main@sel+1,c
+   410  007F1C  0E01               	movlw	1
+   411  007F1E  D008               	goto	L2
+   412  007F20                     l40:
+   413                           
+   414                           ;Practica3_01__11_02_19.c: 64:                         if(PORTBbits.RB0==1 && PORTBbits.
+      +                          RB1==1 && PORTBbits.RB2==0){
+   415  007F20  B081               	btfsc	3969,0,c	;volatile
+   416  007F22  A281               	btfss	3969,1,c	;volatile
+   417  007F24  D00B               	goto	l826
+   418  007F26  B481               	btfsc	3969,2,c	;volatile
+   419  007F28  D009               	goto	l826
+   420                           
+   421                           ;Practica3_01__11_02_19.c: 65:                             sel=3;
+   422  007F2A  0E00               	movlw	0
+   423  007F2C  6E1B               	movwf	main@sel+1,c
+   424  007F2E  0E03               	movlw	3
+   425  007F30                     L2:
+   426  007F30  6E1A               	movwf	main@sel,c
+   427                           
+   428                           ;Practica3_01__11_02_19.c: 66:                             out=1;
+   429  007F32  0E00               	movlw	0
+   430  007F34  6E1D               	movwf	main@out+1,c
+   431  007F36  0E01               	movlw	1
+   432  007F38  6E1C               	movwf	main@out,c
+   433                           
+   434                           ;Practica3_01__11_02_19.c: 67:                             break;
+   435  007F3A  D00A               	goto	u240
+   436  007F3C                     l826:
+   437                           
+   438                           ;Practica3_01__11_02_19.c: 69:                     }if(out==1)break;
+   439  007F3C  4A1E               	infsnz	main@contador,f,c
+   440  007F3E  2A1F               	incf	main@contador+1,f,c
+   441  007F40  BE1F               	btfsc	main@contador+1,7,c
+   442  007F42  D7D2               	goto	l808
+   443  007F44  501F               	movf	main@contador+1,w,c
+   444  007F46  E104               	bnz	u240
+   445  007F48  0E09               	movlw	9
+   446  007F4A  5C1E               	subwf	main@contador,w,c
+   447  007F4C  A0D8               	btfss	status,0,c
+   448  007F4E  D7CC               	goto	l808
+   449  007F50                     u240:
+   450  007F50  041C               	decf	main@out,w,c
+   451  007F52  101D               	iorwf	main@out+1,w,c
+   452  007F54  A4D8               	btfss	status,2,c
+   453  007F56  D7C0               	goto	l37
+   454  007F58                     u250:
+   455  007F58  0E00               	movlw	0
+   456  007F5A  6E1D               	movwf	main@out+1,c
+   457  007F5C  0E00               	movlw	0
+   458  007F5E  6E1C               	movwf	main@out,c
+   459  007F60                     l46:
+   460                           
+   461                           ;Practica3_01__11_02_19.c: 74:                     for(contador=0;contador<6;contador++)
+      +                          {
+   462  007F60  0E00               	movlw	0
+   463  007F62  6E1F               	movwf	main@contador+1,c
+   464  007F64  0E00               	movlw	0
+   465  007F66  6E1E               	movwf	main@contador,c
+   466  007F68                     l840:
+   467                           
+   468                           ;Practica3_01__11_02_19.c: 75:                         PORTD=sorpresa[contador];
+   469  007F68  0E12               	movlw	low _sorpresa
+   470  007F6A  241E               	addwf	main@contador,w,c
+   471  007F6C  6ED9               	movwf	fsr2l,c
+   472  007F6E  0E00               	movlw	high _sorpresa
+   473  007F70  201F               	addwfc	main@contador+1,w,c
+   474  007F72  6EDA               	movwf	fsr2h,c
+   475  007F74  50DF               	movf	indf2,w,c
+   476  007F76  6E83               	movwf	3971,c	;volatile
+   477                           
+   478                           ;Practica3_01__11_02_19.c: 76:                         _delay((unsigned long)((500)*(800
+      +                          0000/4000.0)));
+   479  007F78  0E06               	movlw	6
+   480  007F7A  6E19               	movwf	(??_main+1)& (0+255),c
+   481  007F7C  0E13               	movlw	19
+   482  007F7E  6E18               	movwf	??_main& (0+255),c
+   483  007F80  0EAE               	movlw	174
+   484  007F82                     u367:
+   485  007F82  2EE8               	decfsz	wreg,f,c
+   486  007F84  D7FE               	bra	u367
+   487  007F86  2E18               	decfsz	??_main& (0+255),f,c
+   488  007F88  D7FC               	bra	u367
+   489  007F8A  2E19               	decfsz	(??_main+1)& (0+255),f,c
+   490  007F8C  D7FA               	bra	u367
+   491                           
+   492                           ;Practica3_01__11_02_19.c: 77:                         if(PORTBbits.RB0==0 && PORTBbits.
+      +                          RB1==1 && PORTBbits.RB2==1){
+   493  007F8E  A081               	btfss	3969,0,c	;volatile
+   494  007F90  A281               	btfss	3969,1,c	;volatile
+   495  007F92  D006               	goto	l49
+   496  007F94  A481               	btfss	3969,2,c	;volatile
+   497  007F96  D004               	goto	l49
+   498                           
+   499                           ;Practica3_01__11_02_19.c: 78:                             sel=1;
+   500  007F98  0E00               	movlw	0
+   501  007F9A  6E1B               	movwf	main@sel+1,c
+   502  007F9C  0E01               	movlw	1
+   503  007F9E  D008               	goto	L3
+   504  007FA0                     l49:
+   505                           
+   506                           ;Practica3_01__11_02_19.c: 82:                         if(PORTBbits.RB0==1 && PORTBbits.
+      +                          RB1==0 && PORTBbits.RB2==1){
+   507  007FA0  B081               	btfsc	3969,0,c	;volatile
+   508  007FA2  B281               	btfsc	3969,1,c	;volatile
+   509  007FA4  D00B               	goto	l858
+   510  007FA6  A481               	btfss	3969,2,c	;volatile
+   511  007FA8  D009               	goto	l858
+   512                           
+   513                           ;Practica3_01__11_02_19.c: 83:                             sel=2;
+   514  007FAA  0E00               	movlw	0
+   515  007FAC  6E1B               	movwf	main@sel+1,c
+   516  007FAE  0E02               	movlw	2
+   517  007FB0                     L3:
+   518  007FB0  6E1A               	movwf	main@sel,c
+   519                           
+   520                           ;Practica3_01__11_02_19.c: 84:                             out=1;
+   521  007FB2  0E00               	movlw	0
+   522  007FB4  6E1D               	movwf	main@out+1,c
+   523  007FB6  0E01               	movlw	1
+   524  007FB8  6E1C               	movwf	main@out,c
+   525                           
+   526                           ;Practica3_01__11_02_19.c: 85:                             break;
+   527  007FBA  D00A               	goto	u320
+   528  007FBC                     l858:
+   529                           
+   530                           ;Practica3_01__11_02_19.c: 87:                     }if(out==1)break;
+   531  007FBC  4A1E               	infsnz	main@contador,f,c
+   532  007FBE  2A1F               	incf	main@contador+1,f,c
+   533  007FC0  BE1F               	btfsc	main@contador+1,7,c
+   534  007FC2  D7D2               	goto	l840
+   535  007FC4  501F               	movf	main@contador+1,w,c
+   536  007FC6  E104               	bnz	u320
+   537  007FC8  0E06               	movlw	6
+   538  007FCA  5C1E               	subwf	main@contador,w,c
+   539  007FCC  A0D8               	btfss	status,0,c
+   540  007FCE  D7CC               	goto	l840
+   541  007FD0                     u320:
+   542  007FD0  041C               	decf	main@out,w,c
+   543  007FD2  101D               	iorwf	main@out+1,w,c
+   544  007FD4  B4D8               	btfsc	status,2,c
+   545  007FD6  D71F               	goto	l746
+   546  007FD8  D7C3               	goto	l46
+   547  007FDA                     l866:
+   548  007FDA  C01A  F018         	movff	main@sel,??_main
+   549  007FDE  C01B  F019         	movff	main@sel+1,??_main+1
+   550                           
+   551                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+      +                          itches
+   552                           ; Switch size 1, requested type "simple"
+   553                           ; Number of cases is 1, Range of values is 0 to 0
+   554                           ; switch strategies available:
+   555                           ; Name         Instructions Cycles
+   556                           ; simple_byte            4     3 (average)
+   557                           ;	Chosen strategy is simple_byte
+   558  007FE2  5019               	movf	??_main+1,w,c
+   559  007FE4  0A00               	xorlw	0	; case 0
+   560  007FE6  A4D8               	btfss	status,2,c
+   561  007FE8  D716               	goto	l746
+   562                           
+   563                           ; Switch size 1, requested type "simple"
+   564                           ; Number of cases is 3, Range of values is 1 to 3
+   565                           ; switch strategies available:
+   566                           ; Name         Instructions Cycles
+   567                           ; simple_byte           10     6 (average)
+   568                           ;	Chosen strategy is simple_byte
+   569  007FEA  5018               	movf	??_main,w,c
+   570  007FEC  0A01               	xorlw	1	; case 1
+   571  007FEE  B4D8               	btfsc	status,2,c
+   572  007FF0  D72E               	goto	l770
+   573  007FF2  0A03               	xorlw	3	; case 2
+   574  007FF4  B4D8               	btfsc	status,2,c
+   575  007FF6  D76C               	goto	l802
+   576  007FF8  0A01               	xorlw	1	; case 3
+   577  007FFA  B4D8               	btfsc	status,2,c
+   578  007FFC  D7AD               	goto	u250
+   579  007FFE  D70B               	goto	l746
+   580  008000                     __end_of_main:
+   581                           	opt callstack 0
+   582  0000                     
+   583                           	psect	rparam
+   584  0000                     tosu	equ	0xFFF
+   585                           tosh	equ	0xFFE
+   586                           tosl	equ	0xFFD
+   587                           stkptr	equ	0xFFC
+   588                           pclatu	equ	0xFFB
+   589                           pclath	equ	0xFFA
+   590                           pcl	equ	0xFF9
+   591                           tblptru	equ	0xFF8
+   592                           tblptrh	equ	0xFF7
+   593                           tblptrl	equ	0xFF6
+   594                           tablat	equ	0xFF5
+   595                           prodh	equ	0xFF4
+   596                           prodl	equ	0xFF3
+   597                           indf0	equ	0xFEF
+   598                           postinc0	equ	0xFEE
+   599                           postdec0	equ	0xFED
+   600                           preinc0	equ	0xFEC
+   601                           plusw0	equ	0xFEB
+   602                           fsr0h	equ	0xFEA
+   603                           fsr0l	equ	0xFE9
+   604                           wreg	equ	0xFE8
+   605                           indf1	equ	0xFE7
+   606                           postinc1	equ	0xFE6
+   607                           postdec1	equ	0xFE5
+   608                           preinc1	equ	0xFE4
+   609                           plusw1	equ	0xFE3
+   610                           fsr1h	equ	0xFE2
+   611                           fsr1l	equ	0xFE1
+   612                           bsr	equ	0xFE0
+   613                           indf2	equ	0xFDF
+   614                           postinc2	equ	0xFDE
+   615                           postdec2	equ	0xFDD
+   616                           preinc2	equ	0xFDC
+   617                           plusw2	equ	0xFDB
+   618                           fsr2h	equ	0xFDA
+   619                           fsr2l	equ	0xFD9
+   620                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        23
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95      8      31
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 8     8      0     195
+                                              0 COMRAM     8     8      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 0
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             7FF      0       0      21        0.0%
+EEDATA             100      0       0       0        0.0%
+BITBANK7           100      0       0      18        0.0%
+BANK7              100      0       0      19        0.0%
+BITBANK6           100      0       0      16        0.0%
+BANK6              100      0       0      17        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITCOMRAM           5F      0       0       0        0.0%
+COMRAM              5F      8      1F       1       32.6%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0      1F      20        0.0%
+DATA                 0      0      1F       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V2.05 build -831301201 
+Symbol Table                                                                                   Mon Feb 11 22:33:51 2019
+
+                     l30 7E96                       l40 7F20                       l27 7E56  
+                     l37 7ED8                       l46 7F60                       l49 7FA0  
+            __CFG_BORV$3 000000             __CFG_CP0$OFF 000000             __CFG_CP1$OFF 000000  
+           __CFG_CP2$OFF 000000             __CFG_CP3$OFF 000000                      l802 7ED0  
+                    l840 7F68                      l808 7EE8                      l826 7F3C  
+                    l770 7E4E                      l762 7E3A                      l754 7E28  
+                    l746 7E16                      l776 7E5E                      l858 7FBC  
+                    l794 7EB2                      l866 7FDA             __CFG_CPB$OFF 000000  
+                    u320 7FD0                      u240 7F50                      u160 7EC6  
+                    u250 7F58             __CFG_CPD$OFF 000000                      u347 7E78  
+                    u357 7F02                      u367 7F82             __CFG_BOR$OFF 000000  
+                    wreg 000FE8             __CFG_FOSC$HS 000000             __CFG_LVP$OFF 000000  
+           __CFG_WDT$OFF 000000             __CFG_PWRT$ON 000000                     _main 7DFA  
+                   indf2 000FDF                     fsr1l 000FE1                     fsr2l 000FD9  
+                   start 0000            __CFG_IESO$OFF 000000            __CFG_MCLRE$ON 000000  
+           ___param_bank 000000            __CFG_PLLDIV$1 000000             main@contador 001E  
+                  ?_main 0018                    _PORTD 000F83            __CFG_USBDIV$1 000000  
+                  _TRISD 000F95            __CFG_WRT0$OFF 000000            __CFG_WRT1$OFF 000000  
+          __CFG_WRT2$OFF 000000            __CFG_WRT3$OFF 000000           __CFG_EBTR0$OFF 000000  
+         __CFG_FCMEN$OFF 000000           __CFG_EBTR1$OFF 000000           __CFG_EBTR2$OFF 000000  
+         __CFG_EBTR3$OFF 000000            __CFG_WRTB$OFF 000000            __CFG_WRTC$OFF 000000  
+          __CFG_WRTD$OFF 000000           __CFG_EBTRB$OFF 000000                    tablat 000FF5  
+                  status 000FD8           __CFG_ICPRT$OFF 000000          __initialization 7DD0  
+           __end_of_main 8000                   ??_main 0018            __activetblptr 000002  
+        __CFG_CCP2MX$OFF 000000           __CFG_XINST$OFF 000000                   _Nombre 000A  
+         __CFG_STVREN$ON 000000                   _codigo 0001             __pdataCOMRAM 0001  
+                 tblptrh 000FF7                   tblptrl 000FF6                   tblptru 000FF8  
+             __accesstop 0060  __end_of__initialization 7DF0          __CFG_PBADEN$OFF 000000  
+          ___rparam_used 000001           __pcstackCOMRAM 0018          __CFG_LPT1OSC$ON 000000  
+        __CFG_VREGEN$OFF 000000                  __Hparam 0000                  __Lparam 0000  
+                __pcinit 7DD0                  __ramtop 0800                  __ptext0 7DFA  
+                main@sel 001A                  main@out 001C     end_of_initialization 7DF0  
+          __Lmediumconst 0000                  postdec1 000FE5                  postinc0 000FEE  
+              _PORTBbits 000F81                _TRISBbits 000F93            __pidataCOMRAM 7DB9  
+    start_initialization 7DD0         __CFG_WDTPS$32768 000000                copy_data0 7DE4  
+               __Hrparam 0000                 __Lrparam 0000            __size_of_main 0206  
+               _sorpresa 0012    __CFG_CPUDIV$OSC1_PLL2 000000  

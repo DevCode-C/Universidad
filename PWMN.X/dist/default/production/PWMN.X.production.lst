@@ -1,0 +1,647 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.32 build 58300 
+                                                                                               Wed Nov 14 21:18:11 2018
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 58300
+     1                           	processor	18F4550
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1
+     8                           	psect	text1,global,reloc=2,class=CODE,delta=1
+     9                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1
+    10                           	psect	rparam,global,class=COMRAM,space=1,delta=1
+    11  0000                     _ADCON0	set	4034
+    12  0000                     _ADCON2	set	4032
+    13  0000                     _CCP1CON	set	4029
+    14  0000                     _CCP1CONbits	set	4029
+    15  0000                     _CCPR1L	set	4030
+    16  0000                     _INTCON2bits	set	4081
+    17  0000                     _PORTB	set	3969
+    18  0000                     _PORTBbits	set	3969
+    19  0000                     _PORTD	set	3971
+    20  0000                     _PR2	set	4043
+    21  0000                     _T2CON	set	4042
+    22  0000                     _TRISB	set	3987
+    23  0000                     _TRISCbits	set	3988
+    24  0000                     _TRISD	set	3989
+    25                           
+    26 ;;
+    27 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+    28 ;;
+    29 ;; *************** function _main *****************
+    30 ;; Defined at:
+    31 ;;		line 47 in file "PWMN.c"
+    32 ;; Parameters:    Size  Location     Type
+    33 ;;		None
+    34 ;; Auto vars:     Size  Location     Type
+    35 ;;  dato            1    1[COMRAM] unsigned char 
+    36 ;; Return value:  Size  Location     Type
+    37 ;;		None               void
+    38 ;; Registers used:
+    39 ;;		wreg, status,2, status,0, cstack
+    40 ;; Tracked objects:
+    41 ;;		On entry : 0/0
+    42 ;;		On exit  : 0/0
+    43 ;;		Unchanged: 0/0
+    44 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+    45 ;;      Params:         0       0       0       0       0       0       0       0       0
+    46 ;;      Locals:         1       0       0       0       0       0       0       0       0
+    47 ;;      Temps:          0       0       0       0       0       0       0       0       0
+    48 ;;      Totals:         1       0       0       0       0       0       0       0       0
+    49 ;;Total ram usage:        1 bytes
+    50 ;; Hardware stack levels required when called:    1
+    51 ;; This function calls:
+    52 ;;		_lectura
+    53 ;; This function is called by:
+    54 ;;		Startup code after reset
+    55 ;; This function uses a non-reentrant model
+    56 ;;
+    57                           
+    58                           	psect	text0
+    59  007F22                     __ptext0:
+    60                           	opt stack 0
+    61  007F22                     _main:
+    62                           	opt stack 30
+    63                           
+    64                           ;PWMN.c: 49: unsigned char dato = 0;
+    65                           
+    66                           ;incstack = 0
+    67  007F22  0E00               	movlw	0
+    68  007F24  6E02               	movwf	main@dato,c
+    69                           
+    70                           ;PWMN.c: 50: ADCON2=0b00001110;
+    71  007F26  0E0E               	movlw	14
+    72  007F28  6EC0               	movwf	4032,c	;volatile
+    73                           
+    74                           ;PWMN.c: 51: ADCON0=0b00000000;
+    75  007F2A  0E00               	movlw	0
+    76  007F2C  6EC2               	movwf	4034,c	;volatile
+    77                           
+    78                           ;PWMN.c: 52: INTCON2bits.RBPU=0;
+    79  007F2E  9EF1               	bcf	intcon2,7,c	;volatile
+    80                           
+    81                           ;PWMN.c: 53: TRISB=0xF0;
+    82  007F30  0EF0               	movlw	240
+    83  007F32  6E93               	movwf	3987,c	;volatile
+    84                           
+    85                           ;PWMN.c: 54: TRISD=0x00;
+    86  007F34  0E00               	movlw	0
+    87  007F36  6E95               	movwf	3989,c	;volatile
+    88                           
+    89                           ;PWMN.c: 56: PR2=0xFF;
+    90  007F38  68CB               	setf	4043,c	;volatile
+    91                           
+    92                           ;PWMN.c: 57: TRISCbits.RC2=0;
+    93  007F3A  9494               	bcf	3988,2,c	;volatile
+    94                           
+    95                           ;PWMN.c: 58: CCP1CON=0x0C;
+    96  007F3C  0E0C               	movlw	12
+    97  007F3E  6EBD               	movwf	4029,c	;volatile
+    98                           
+    99                           ;PWMN.c: 59: T2CON=0x07;
+   100  007F40  0E07               	movlw	7
+   101  007F42  6ECA               	movwf	4042,c	;volatile
+   102  007F44                     
+   103                           ;PWMN.c: 60: CCPR1L=0x00;
+   104  007F44  0E00               	movlw	0
+   105  007F46                     L1:
+   106  007F46  6EBE               	movwf	4030,c	;volatile
+   107                           
+   108                           ;PWMN.c: 61: CCP1CONbits.DC1B1=0;
+   109  007F48  9ABD               	bcf	4029,5,c	;volatile
+   110  007F4A                     L3:
+   111                           
+   112                           ;PWMN.c: 62: CCP1CONbits.DC1B0=0;
+   113  007F4A  98BD               	bcf	4029,4,c	;volatile
+   114  007F4C                     l725:
+   115                           
+   116                           ;PWMN.c: 70: dato = lectura();
+   117  007F4C  EC45  F03F         	call	_lectura	;wreg free
+   118  007F50  6E02               	movwf	main@dato,c
+   119                           
+   120                           ;PWMN.c: 71: switch(dato){
+   121  007F52  D033               	goto	l797
+   122  007F54                     l727:
+   123  007F54  0E01               	movlw	1
+   124  007F56  6E83               	movwf	3971,c	;volatile
+   125                           
+   126                           ;PWMN.c: 73: CCPR1L=0b00011001;
+   127  007F58  0E19               	movlw	25
+   128  007F5A  D7F5               	goto	L1
+   129  007F5C                     l733:
+   130  007F5C  0E02               	movlw	2
+   131  007F5E  6E83               	movwf	3971,c	;volatile
+   132                           
+   133                           ;PWMN.c: 80: CCPR1L=0b00110011;
+   134  007F60  0E33               	movlw	51
+   135  007F62  D00B               	goto	L2
+   136  007F64                     l739:
+   137  007F64  0E03               	movlw	3
+   138  007F66  6E83               	movwf	3971,c	;volatile
+   139                           
+   140                           ;PWMN.c: 86: CCPR1L=0b01001101;
+   141  007F68  0E4D               	movlw	77
+   142  007F6A  D7ED               	goto	L1
+   143  007F6C                     l745:
+   144  007F6C  0E04               	movlw	4
+   145  007F6E  6E83               	movwf	3971,c	;volatile
+   146                           
+   147                           ;PWMN.c: 92: CCPR1L=0b01100110;
+   148  007F70  0E66               	movlw	102
+   149  007F72  D00F               	goto	L6
+   150  007F74                     l751:
+   151  007F74  0E05               	movlw	5
+   152  007F76  6E83               	movwf	3971,c	;volatile
+   153                           
+   154                           ;PWMN.c: 98: CCPR1L=0b10000000;
+   155  007F78  0E80               	movlw	128
+   156  007F7A                     L2:
+   157  007F7A  6EBE               	movwf	4030,c	;volatile
+   158                           
+   159                           ;PWMN.c: 99: CCP1CONbits.DC1B1=0;
+   160  007F7C  9ABD               	bcf	4029,5,c	;volatile
+   161  007F7E  D004               	goto	L4
+   162  007F80                     l757:
+   163  007F80  0E06               	movlw	6
+   164  007F82  6E83               	movwf	3971,c	;volatile
+   165                           
+   166                           ;PWMN.c: 104: CCPR1L=0b10011001;
+   167  007F84  0E99               	movlw	153
+   168  007F86  D00F               	goto	L5
+   169  007F88                     L4:
+   170                           
+   171                           ;PWMN.c: 106: CCP1CONbits.DC1B0=1;}
+   172  007F88  88BD               	bsf	4029,4,c	;volatile
+   173                           
+   174                           ;PWMN.c: 107: break;
+   175  007F8A  D7E0               	goto	l725
+   176  007F8C                     l763:
+   177  007F8C  0E07               	movlw	7
+   178  007F8E  6E83               	movwf	3971,c	;volatile
+   179                           
+   180                           ;PWMN.c: 110: CCPR1L=0b10110011;
+   181  007F90  0EB3               	movlw	179
+   182  007F92                     L6:
+   183  007F92  6EBE               	movwf	4030,c	;volatile
+   184                           
+   185                           ;PWMN.c: 111: CCP1CONbits.DC1B1=1;
+   186  007F94  8ABD               	bsf	4029,5,c	;volatile
+   187  007F96  D7D9               	goto	L3
+   188  007F98                     l769:
+   189  007F98  0E08               	movlw	8
+   190  007F9A  6E83               	movwf	3971,c	;volatile
+   191                           
+   192                           ;PWMN.c: 116: CCPR1L=0b11001110;
+   193  007F9C  0ECE               	movlw	206
+   194  007F9E  D7D3               	goto	L1
+   195  007FA0                     l775:
+   196  007FA0  0E09               	movlw	9
+   197  007FA2  6E83               	movwf	3971,c	;volatile
+   198                           
+   199                           ;PWMN.c: 122: CCPR1L=0b11100110;
+   200  007FA4  0EE6               	movlw	230
+   201  007FA6                     L5:
+   202  007FA6  6EBE               	movwf	4030,c	;volatile
+   203  007FA8  D006               	goto	L7
+   204  007FAA                     l781:
+   205  007FAA  0E0A               	movlw	10
+   206  007FAC  6E83               	movwf	3971,c	;volatile
+   207  007FAE  D7CA               	goto	L8
+   208  007FB0                     l787:
+   209  007FB0  0E0B               	movlw	11
+   210  007FB2  6E83               	movwf	3971,c	;volatile
+   211                           
+   212                           ;PWMN.c: 134: CCPR1L=0b11111111;
+   213  007FB4  68BE               	setf	4030,c	;volatile
+   214  007FB6                     L7:
+   215                           
+   216                           ;PWMN.c: 135: CCP1CONbits.DC1B1=1;
+   217  007FB6  8ABD               	bsf	4029,5,c	;volatile
+   218  007FB8  D7E7               	goto	L4
+   219  007FBA                     l797:
+   220  007FBA  5002               	movf	main@dato,w,c
+   221                           
+   222                           ; Switch size 1, requested type "space"
+   223                           ; Number of cases is 11, Range of values is 49 to 66
+   224                           ; switch strategies available:
+   225                           ; Name         Instructions Cycles
+   226                           ; simple_byte           34    18 (average)
+   227                           ;	Chosen strategy is simple_byte
+   228  007FBC  0A31               	xorlw	49	; case 49
+   229  007FBE  B4D8               	btfsc	status,2,c
+   230  007FC0  D7C9               	goto	l727
+   231  007FC2  0A03               	xorlw	3	; case 50
+   232  007FC4  B4D8               	btfsc	status,2,c
+   233  007FC6  D7CA               	goto	l733
+   234  007FC8  0A01               	xorlw	1	; case 51
+   235  007FCA  B4D8               	btfsc	status,2,c
+   236  007FCC  D7CB               	goto	l739
+   237  007FCE  0A07               	xorlw	7	; case 52
+   238  007FD0  B4D8               	btfsc	status,2,c
+   239  007FD2  D7CC               	goto	l745
+   240  007FD4  0A01               	xorlw	1	; case 53
+   241  007FD6  B4D8               	btfsc	status,2,c
+   242  007FD8  D7CD               	goto	l751
+   243  007FDA  0A03               	xorlw	3	; case 54
+   244  007FDC  B4D8               	btfsc	status,2,c
+   245  007FDE  D7D0               	goto	l757
+   246  007FE0  0A01               	xorlw	1	; case 55
+   247  007FE2  B4D8               	btfsc	status,2,c
+   248  007FE4  D7D3               	goto	l763
+   249  007FE6  0A0F               	xorlw	15	; case 56
+   250  007FE8  B4D8               	btfsc	status,2,c
+   251  007FEA  D7D6               	goto	l769
+   252  007FEC  0A01               	xorlw	1	; case 57
+   253  007FEE  B4D8               	btfsc	status,2,c
+   254  007FF0  D7D7               	goto	l775
+   255  007FF2  0A78               	xorlw	120	; case 65
+   256  007FF4  B4D8               	btfsc	status,2,c
+   257  007FF6  D7DC               	goto	l787
+   258  007FF8  0A03               	xorlw	3	; case 66
+   259  007FFA  B4D8               	btfsc	status,2,c
+   260  007FFC  D7D6               	goto	l781
+   261  007FFE  D7A6               	goto	l725
+   262  008000                     __end_of_main:
+   263                           	opt stack 0
+   264                           intcon2	equ	0xFF1
+   265                           status	equ	0xFD8
+   266                           
+   267                           	psect	cinit
+   268  007E80                     __pcinit:
+   269                           	opt stack 0
+   270  007E80                     start_initialization:
+   271                           	opt stack 0
+   272  007E80                     __initialization:
+   273                           	opt stack 0
+   274  007E80                     end_of_initialization:
+   275                           	opt stack 0
+   276  007E80                     __end_of__initialization:
+   277                           	opt stack 0
+   278  007E80  0E00               	movlw	low (__Lmediumconst shr (0+16))
+   279  007E82  6EF8               	movwf	tblptru,c
+   280  007E84  0100               	movlb	0
+   281  007E86  EF91  F03F         	goto	_main	;jump to C main() function
+   282                           tblptru	equ	0xFF8
+   283                           intcon2	equ	0xFF1
+   284                           status	equ	0xFD8
+   285                           
+   286                           	psect	cstackCOMRAM
+   287  000001                     __pcstackCOMRAM:
+   288                           	opt stack 0
+   289  000001                     lectura@valor:
+   290                           	opt stack 0
+   291                           
+   292                           ; 1 bytes @ 0x0
+   293  000001                     	ds	1
+   294  000002                     main@dato:
+   295                           	opt stack 0
+   296                           
+   297                           ; 1 bytes @ 0x1
+   298  000002                     	ds	1
+   299                           tblptru	equ	0xFF8
+   300                           intcon2	equ	0xFF1
+   301                           status	equ	0xFD8
+   302                           
+   303 ;; *************** function _lectura *****************
+   304 ;; Defined at:
+   305 ;;		line 21 in file "PWMN.c"
+   306 ;; Parameters:    Size  Location     Type
+   307 ;;		None
+   308 ;; Auto vars:     Size  Location     Type
+   309 ;;  valor           1    0[COMRAM] unsigned char 
+   310 ;; Return value:  Size  Location     Type
+   311 ;;                  1    wreg      unsigned char 
+   312 ;; Registers used:
+   313 ;;		wreg, status,2
+   314 ;; Tracked objects:
+   315 ;;		On entry : 0/0
+   316 ;;		On exit  : 0/0
+   317 ;;		Unchanged: 0/0
+   318 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   319 ;;      Params:         0       0       0       0       0       0       0       0       0
+   320 ;;      Locals:         1       0       0       0       0       0       0       0       0
+   321 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   322 ;;      Totals:         1       0       0       0       0       0       0       0       0
+   323 ;;Total ram usage:        1 bytes
+   324 ;; Hardware stack levels used:    1
+   325 ;; This function calls:
+   326 ;;		Nothing
+   327 ;; This function is called by:
+   328 ;;		_main
+   329 ;; This function uses a non-reentrant model
+   330 ;;
+   331                           
+   332                           	psect	text1
+   333  007E8A                     __ptext1:
+   334                           	opt stack 0
+   335  007E8A                     _lectura:
+   336                           	opt stack 30
+   337                           
+   338                           ;PWMN.c: 22: unsigned char valor='0';
+   339                           
+   340                           ;incstack = 0
+   341  007E8A  0E30               	movlw	48
+   342  007E8C  6E01               	movwf	lectura@valor,c
+   343                           
+   344                           ;PWMN.c: 23: PORTB=0xFE;
+   345  007E8E  0EFE               	movlw	254
+   346  007E90  6E81               	movwf	3969,c	;volatile
+   347                           
+   348                           ;PWMN.c: 24: if(PORTBbits.RB4==0){valor = '*';}
+   349  007E92  B881               	btfsc	3969,4,c	;volatile
+   350  007E94  D002               	goto	l651
+   351  007E96  0E2A               	movlw	42
+   352  007E98  6E01               	movwf	lectura@valor,c
+   353  007E9A                     l651:
+   354                           
+   355                           ;PWMN.c: 25: if(PORTBbits.RB5==0){valor = '0';}
+   356  007E9A  BA81               	btfsc	3969,5,c	;volatile
+   357  007E9C  D002               	goto	l655
+   358  007E9E  0E30               	movlw	48
+   359  007EA0  6E01               	movwf	lectura@valor,c
+   360  007EA2                     l655:
+   361                           
+   362                           ;PWMN.c: 26: if(PORTBbits.RB6==0){valor = '#';}
+   363  007EA2  BC81               	btfsc	3969,6,c	;volatile
+   364  007EA4  D002               	goto	l659
+   365  007EA6  0E23               	movlw	35
+   366  007EA8  6E01               	movwf	lectura@valor,c
+   367  007EAA                     l659:
+   368                           
+   369                           ;PWMN.c: 27: if(PORTBbits.RB7==0){valor = 'D';}
+   370  007EAA  BE81               	btfsc	3969,7,c	;volatile
+   371  007EAC  D002               	goto	l37
+   372  007EAE  0E44               	movlw	68
+   373  007EB0  6E01               	movwf	lectura@valor,c
+   374  007EB2                     l37:
+   375                           
+   376                           ;PWMN.c: 28: PORTB=0xFD;
+   377  007EB2  0EFD               	movlw	253
+   378  007EB4  6E81               	movwf	3969,c	;volatile
+   379                           
+   380                           ;PWMN.c: 29: if(PORTBbits.RB4==0){valor = '7';}
+   381  007EB6  B881               	btfsc	3969,4,c	;volatile
+   382  007EB8  D002               	goto	l667
+   383  007EBA  0E37               	movlw	55
+   384  007EBC  6E01               	movwf	lectura@valor,c
+   385  007EBE                     l667:
+   386                           
+   387                           ;PWMN.c: 30: if(PORTBbits.RB5==0){valor = '8';}
+   388  007EBE  BA81               	btfsc	3969,5,c	;volatile
+   389  007EC0  D002               	goto	l671
+   390  007EC2  0E38               	movlw	56
+   391  007EC4  6E01               	movwf	lectura@valor,c
+   392  007EC6                     l671:
+   393                           
+   394                           ;PWMN.c: 31: if(PORTBbits.RB6==0){valor = '9';}
+   395  007EC6  BC81               	btfsc	3969,6,c	;volatile
+   396  007EC8  D002               	goto	l675
+   397  007ECA  0E39               	movlw	57
+   398  007ECC  6E01               	movwf	lectura@valor,c
+   399  007ECE                     l675:
+   400                           
+   401                           ;PWMN.c: 32: if(PORTBbits.RB7==0){valor = 'C';}
+   402  007ECE  BE81               	btfsc	3969,7,c	;volatile
+   403  007ED0  D002               	goto	l41
+   404  007ED2  0E43               	movlw	67
+   405  007ED4  6E01               	movwf	lectura@valor,c
+   406  007ED6                     l41:
+   407                           
+   408                           ;PWMN.c: 33: PORTB=0xFB;
+   409  007ED6  0EFB               	movlw	251
+   410  007ED8  6E81               	movwf	3969,c	;volatile
+   411                           
+   412                           ;PWMN.c: 34: if(PORTBbits.RB4==0){valor = '4';}
+   413  007EDA  B881               	btfsc	3969,4,c	;volatile
+   414  007EDC  D002               	goto	l683
+   415  007EDE  0E34               	movlw	52
+   416  007EE0  6E01               	movwf	lectura@valor,c
+   417  007EE2                     l683:
+   418                           
+   419                           ;PWMN.c: 35: if(PORTBbits.RB5==0){valor = '5';}
+   420  007EE2  BA81               	btfsc	3969,5,c	;volatile
+   421  007EE4  D002               	goto	l687
+   422  007EE6  0E35               	movlw	53
+   423  007EE8  6E01               	movwf	lectura@valor,c
+   424  007EEA                     l687:
+   425                           
+   426                           ;PWMN.c: 36: if(PORTBbits.RB6==0){valor = '6';}
+   427  007EEA  BC81               	btfsc	3969,6,c	;volatile
+   428  007EEC  D002               	goto	l691
+   429  007EEE  0E36               	movlw	54
+   430  007EF0  6E01               	movwf	lectura@valor,c
+   431  007EF2                     l691:
+   432                           
+   433                           ;PWMN.c: 37: if(PORTBbits.RB7==0){valor = 'B';}
+   434  007EF2  BE81               	btfsc	3969,7,c	;volatile
+   435  007EF4  D002               	goto	l45
+   436  007EF6  0E42               	movlw	66
+   437  007EF8  6E01               	movwf	lectura@valor,c
+   438  007EFA                     l45:
+   439                           
+   440                           ;PWMN.c: 38: PORTB=0xF7;
+   441  007EFA  0EF7               	movlw	247
+   442  007EFC  6E81               	movwf	3969,c	;volatile
+   443                           
+   444                           ;PWMN.c: 39: if(PORTBbits.RB4==0){valor = '1';}
+   445  007EFE  B881               	btfsc	3969,4,c	;volatile
+   446  007F00  D002               	goto	l699
+   447  007F02  0E31               	movlw	49
+   448  007F04  6E01               	movwf	lectura@valor,c
+   449  007F06                     l699:
+   450                           
+   451                           ;PWMN.c: 40: if(PORTBbits.RB5==0){valor = '2';}
+   452  007F06  BA81               	btfsc	3969,5,c	;volatile
+   453  007F08  D002               	goto	l703
+   454  007F0A  0E32               	movlw	50
+   455  007F0C  6E01               	movwf	lectura@valor,c
+   456  007F0E                     l703:
+   457                           
+   458                           ;PWMN.c: 41: if(PORTBbits.RB6==0){valor = '3';}
+   459  007F0E  BC81               	btfsc	3969,6,c	;volatile
+   460  007F10  D002               	goto	l707
+   461  007F12  0E33               	movlw	51
+   462  007F14  6E01               	movwf	lectura@valor,c
+   463  007F16                     l707:
+   464                           
+   465                           ;PWMN.c: 42: if(PORTBbits.RB7==0){valor = 'A';}
+   466  007F16  BE81               	btfsc	3969,7,c	;volatile
+   467  007F18  D002               	goto	l49
+   468  007F1A  0E41               	movlw	65
+   469  007F1C  6E01               	movwf	lectura@valor,c
+   470  007F1E                     l49:
+   471                           
+   472                           ;PWMN.c: 43: return valor;
+   473  007F1E  5001               	movf	lectura@valor,w,c
+   474  007F20  0012               	return	
+   475  007F22                     __end_of_lectura:
+   476                           	opt stack 0
+   477  0000                     tblptru	equ	0xFF8
+   478                           intcon2	equ	0xFF1
+   479                           status	equ	0xFD8
+   480                           tblptru	equ	0xFF8
+   481                           intcon2	equ	0xFF1
+   482                           status	equ	0xFD8
+   483                           
+   484                           	psect	rparam
+   485  0000                     tblptru	equ	0xFF8
+   486                           intcon2	equ	0xFF1
+   487                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95      2       2
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    _main->_lectura
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 1     1      0      30
+                                              1 COMRAM     1     1      0
+                            _lectura
+ ---------------------------------------------------------------------------------
+ (1) _lectura                                              1     1      0      15
+                                              0 COMRAM     1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _lectura
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMRAM           5F      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMRAM              5F      2       2       1        2.1%
+STACK                0      0       0       2        0.0%
+DATA                 0      0       0       3        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBANK6           100      0       0      16        0.0%
+BANK6              100      0       0      17        0.0%
+BITBANK7           100      0       0      18        0.0%
+BANK7              100      0       0      19        0.0%
+ABS                  0      0       0      20        0.0%
+BIGRAM             7FF      0       0      21        0.0%
+BITSFR               0      0       0      40        0.0%
+SFR                  0      0       0      40        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.32 build 58300 
+Symbol Table                                                                                   Wed Nov 14 21:18:11 2018
+
+                     l41 7ED6                       l45 7EFA                       l37 7EB2  
+                     l49 7F1E              __CFG_BORV$3 000000       __CFG_FOSC$XTPLL_XT 000000  
+           __CFG_CP0$OFF 000000             __CFG_CP1$OFF 000000             __CFG_CP2$OFF 000000  
+           __CFG_CP3$OFF 000000                      l703 7F0E                      l707 7F16  
+                    l651 7E9A                      l733 7F5C                      l725 7F4C  
+                    l671 7EC6                      l655 7EA2                      l751 7F74  
+                    l727 7F54                      l745 7F6C                      l691 7EF2  
+                    l683 7EE2                      l675 7ECE                      l667 7EBE  
+                    l659 7EAA                      l763 7F8C                      l739 7F64  
+                    l781 7FAA                      l757 7F80                      l687 7EEA  
+                    l775 7FA0                      l769 7F98                      l699 7F06  
+                    l787 7FB0                      l797 7FBA             __CFG_CPB$OFF 000000  
+                    _PR2 000FCB             __CFG_CPD$OFF 000000             __CFG_BOR$OFF 000000  
+           __CFG_LVP$OFF 000000             __CFG_WDT$OFF 000000             __CFG_PWRT$ON 000000  
+                   _main 7F22                     start 0000            __CFG_IESO$OFF 000000  
+          __CFG_MCLRE$ON 000000            __CFG_PLLDIV$1 000000                    ?_main 0001  
+                  _T2CON 000FCA                    _PORTB 000F81                    _PORTD 000F83  
+          __CFG_USBDIV$1 000000                    _TRISB 000F93                    _TRISD 000F95  
+          __CFG_WRT0$OFF 000000            __CFG_WRT1$OFF 000000            __CFG_WRT2$OFF 000000  
+          __CFG_WRT3$OFF 000000           __CFG_EBTR0$OFF 000000           __CFG_FCMEN$OFF 000000  
+         __CFG_EBTR1$OFF 000000           __CFG_EBTR2$OFF 000000           __CFG_EBTR3$OFF 000000  
+          __CFG_WRTB$OFF 000000            __CFG_WRTC$OFF 000000            __CFG_WRTD$OFF 000000  
+         __CFG_EBTRB$OFF 000000          __end_of_lectura 7F22                    status 000FD8  
+         __CFG_ICPRT$OFF 000000          __initialization 7E80             __end_of_main 8000  
+                 ??_main 0002            __activetblptr 000002          __CFG_CCP2MX$OFF 000000  
+                 _ADCON0 000FC2                   _ADCON2 000FC0                   _CCPR1L 000FBE  
+         __CFG_XINST$OFF 000000                ??_lectura 0001                   tblptru 000FF8  
+             __accesstop 0060  __end_of__initialization 7E80          __CFG_PBADEN$OFF 000000  
+         __pcstackCOMRAM 0001             lectura@valor 0001                  _CCP1CON 000FBD  
+        __CFG_VREGEN$OFF 000000                  __Hparam 0000                  __Lparam 0000  
+        __CFG_STVREN$OFF 000000                  __pcinit 7E80                  __ramtop 0800  
+                __ptext0 7F22                  __ptext1 7E8A                  _lectura 7E8A  
+   end_of_initialization 7E80            __Lmediumconst 0000                _PORTBbits 000F81  
+              _TRISCbits 000F94              _CCP1CONbits 000FBD      start_initialization 7E80  
+       __CFG_LPT1OSC$OFF 000000                 ?_lectura 0001         __CFG_WDTPS$32768 000000  
+            _INTCON2bits 000FF1                 __Hrparam 0000                 __Lrparam 0000  
+       __size_of_lectura 0098            __size_of_main 00DE                 main@dato 0002  
+  __CFG_CPUDIV$OSC1_PLL2 000000  

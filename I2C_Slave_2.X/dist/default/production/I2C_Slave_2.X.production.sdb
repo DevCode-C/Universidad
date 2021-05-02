@@ -1,0 +1,282 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 6 ]
+"52 C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+"94
+[v _Lcd_Out Lcd_Out `(v  1 e 1 0 ]
+"115
+[v _Lcd_Out2 Lcd_Out2 `(v  1 e 1 0 ]
+"136
+[v _Lcd_Chr_CP Lcd_Chr_CP `(v  1 e 1 0 ]
+"150
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+"1 C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/I2C_Slave.h
+[v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
+"500 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"43 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"20 C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+[v _main main `(v  1 e 1 0 ]
+"108
+[v _I2C_Slave2_ I2C_Slave2_ `II(v  1 e 1 0 ]
+"136
+[v _teclado teclado `(v  1 e 1 0 ]
+"166 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"228
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S244 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"245
+[u S253 . 1 `S244 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES253  1 e 1 @6 ]
+[s S72 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"369
+[u S81 . 1 `S72 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES81  1 e 1 @8 ]
+"843
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"850
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+[s S126 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"870
+[s S132 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S137 . 1 `S126 1 . 1 0 `S132 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES137  1 e 1 @20 ]
+"1346
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1416
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1478
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+[s S26 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1557
+[u S35 . 1 `S26 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES35  1 e 1 @135 ]
+[s S51 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"1619
+[u S60 . 1 `S51 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES60  1 e 1 @136 ]
+"1979
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
+"2048
+[v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
+"2177
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+[s S153 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"2231
+[s S162 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S167 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S173 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S178 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S183 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S188 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S193 . 1 `S153 1 . 1 0 `S162 1 . 1 0 `S167 1 . 1 0 `S173 1 . 1 0 `S178 1 . 1 0 `S183 1 . 1 0 `S188 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES193  1 e 1 @148 ]
+"3387
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3449
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"3641
+[v _BF BF `VEb  1 e 0 @1184 ]
+"3896
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"4040
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"4274
+[v _SSPIE SSPIE `VEb  1 e 0 @1123 ]
+"4277
+[v _SSPIF SSPIF `VEb  1 e 0 @99 ]
+"4289
+[v _SSPM3 SSPM3 `VEb  1 e 0 @163 ]
+"14 C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+[v _z z `s  1 e 2 0 ]
+"15
+[v _Promedio Promedio `f  1 e 4 0 ]
+"16
+[v _palabra2 palabra2 `[17]uc  1 e 17 0 ]
+"17
+[v _datos datos `ul  1 e 4 0 ]
+"18
+[v _valor valor `uc  1 e 1 0 ]
+[v _caracter caracter `uc  1 e 1 0 ]
+"20
+[v _main main `(v  1 e 1 0 ]
+{
+"107
+} 0
+"136
+[v _teclado teclado `(v  1 e 1 0 ]
+{
+"163
+} 0
+"500 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+"507
+[v sprintf@c c `uc  1 a 1 13 ]
+"502
+[v sprintf@ap ap `[1]*.4v  1 a 1 12 ]
+"500
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+[v sprintf@f f `*.24DCuc  1 p 1 6 ]
+"545
+[v sprintf@sp sp `*.4uc  1 a 1 14 ]
+"1560
+} 0
+"115 C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+[v _Lcd_Out2 Lcd_Out2 `(v  1 e 1 0 ]
+{
+[v Lcd_Out2@y y `uc  1 a 1 wreg ]
+"117
+[v Lcd_Out2@data data `uc  1 a 1 14 ]
+"115
+[v Lcd_Out2@y y `uc  1 a 1 wreg ]
+[v Lcd_Out2@x x `uc  1 p 1 9 ]
+[v Lcd_Out2@buffer buffer `*.4uc  1 p 1 10 ]
+[v Lcd_Out2@y y `uc  1 a 1 13 ]
+"133
+} 0
+"94
+[v _Lcd_Out Lcd_Out `(v  1 e 1 0 ]
+{
+[v Lcd_Out@y y `uc  1 a 1 wreg ]
+"96
+[v Lcd_Out@data data `uc  1 a 1 14 ]
+"94
+[v Lcd_Out@y y `uc  1 a 1 wreg ]
+[v Lcd_Out@x x `uc  1 p 1 9 ]
+[v Lcd_Out@buffer buffer `*.24DCuc  1 p 1 10 ]
+[v Lcd_Out@y y `uc  1 a 1 13 ]
+"112
+} 0
+"136
+[v _Lcd_Chr_CP Lcd_Chr_CP `(v  1 e 1 0 ]
+{
+[v Lcd_Chr_CP@data data `uc  1 a 1 wreg ]
+[v Lcd_Chr_CP@data data `uc  1 a 1 wreg ]
+[v Lcd_Chr_CP@data data `uc  1 a 1 8 ]
+"147
+} 0
+"52
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+{
+"53
+[v Lcd_Init@data data `uc  1 a 1 11 ]
+"91
+} 0
+"150
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+{
+[v Lcd_Cmd@data data `uc  1 a 1 wreg ]
+[v Lcd_Cmd@data data `uc  1 a 1 wreg ]
+[v Lcd_Cmd@data data `uc  1 a 1 8 ]
+"161
+} 0
+"1 C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/I2C_Slave.h
+[v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
+{
+[v I2C_Slave_Init@address address `s  1 p 2 6 ]
+"14
+} 0
+"108 C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+[v _I2C_Slave2_ I2C_Slave2_ `II(v  1 e 1 0 ]
+{
+"135
+} 0
+"43 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 10 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 9 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 0 ]
+"70
+} 0

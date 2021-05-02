@@ -1,0 +1,180 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"1 C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_P3.X/I2C_Slave.h
+[v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"16 C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_P3.X\I2C_Slave_P3.c
+[v _main main `(v  1 e 1 0 ]
+"22
+[v _isr isr `IIH(v  1 e 1 0 ]
+[s S28 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"3657 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f4550.h
+[s S37 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+[u S46 . 1 `S28 1 . 1 0 `S37 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES46  1 e 1 @3987 ]
+"6581
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"6806
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @4037 ]
+"6868
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
+[s S73 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"6888
+[s S79 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S84 . 1 `S73 1 . 1 0 `S79 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES84  1 e 1 @4038 ]
+"6938
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
+[s S100 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_NOT_W 1 0 :1:2 
+]
+"7021
+[s S103 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 D_NOT_A 1 0 :1:5 
+]
+[s S106 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+[s S115 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S120 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DAT 1 0 :1:5 
+]
+[s S126 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S131 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_WRITE 1 0 :1:2 
+]
+[s S134 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_ADDRESS 1 0 :1:5 
+]
+[s S137 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S142 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[s S147 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S152 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW 1 0 :1:2 
+`uc 1 START 1 0 :1:3 
+`uc 1 STOP 1 0 :1:4 
+`uc 1 DA 1 0 :1:5 
+]
+[s S158 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 NOT_A 1 0 :1:5 
+]
+[u S163 . 1 `S100 1 . 1 0 `S103 1 . 1 0 `S106 1 . 1 0 `S115 1 . 1 0 `S120 1 . 1 0 `S126 1 . 1 0 `S131 1 . 1 0 `S134 1 . 1 0 `S137 1 . 1 0 `S142 1 . 1 0 `S147 1 . 1 0 `S152 1 . 1 0 `S158 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES163  1 e 1 @4039 ]
+"7186
+[v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
+"7193
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
+"9009
+[v _BF BF `VEb  1 e 0 @32312 ]
+"9741
+[v _GIE GIE `VEb  1 e 0 @32663 ]
+"10269
+[v _PEIE PEIE `VEb  1 e 0 @32662 ]
+"10641
+[v _SSPIE SSPIE `VEb  1 e 0 @31979 ]
+"10644
+[v _SSPIF SSPIF `VEb  1 e 0 @31987 ]
+"10659
+[v _SSPM3 SSPM3 `VEb  1 e 0 @32307 ]
+"12 C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_P3.X\I2C_Slave_P3.c
+[v _input input `s  1 e 2 0 ]
+[v _output output `s  1 e 2 0 ]
+[v _temp temp `s  1 e 2 0 ]
+"16
+[v _main main `(v  1 e 1 0 ]
+{
+"21
+} 0
+"1 C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_P3.X/I2C_Slave.h
+[v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
+{
+[v I2C_Slave_Init@address address `s  1 p 2 0 ]
+"14
+} 0
+"22 C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_P3.X\I2C_Slave_P3.c
+[v _isr isr `IIH(v  1 e 1 0 ]
+{
+"48
+} 0

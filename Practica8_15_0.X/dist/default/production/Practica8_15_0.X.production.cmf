@@ -1,0 +1,1353 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\Emmanuel\AppData\Local\Temp\sa8c.o
+idloc IDLOC 0 200000 200000 8 1
+init CODE 0 0 0 4 1
+config CONFIG 0 300000 300000 E 1
+$dist/default/production\Practica8_15_0.X.production.o
+cinit CODE 0 5486 5486 1A 1
+text0 CODE 0 6BB6 6BB6 12D0 1
+text1 CODE 0 6610 6610 17C 1
+text2 CODE 0 559E 559E 52 1
+text3 CODE 0 5646 5646 56 1
+text4 CODE 0 678C 678C 1E8 1
+text5 CODE 0 6974 6974 242 1
+text6 CODE 0 54E6 54E6 32 1
+text7 CODE 0 63A4 63A4 124 1
+text8 CODE 0 64C8 64C8 148 1
+text9 CODE 0 5550 5550 4E 1
+text10 CODE 0 59CA 59CA 96 1
+text11 CODE 0 54BC 54BC 2A 1
+text12 CODE 0 5518 5518 38 1
+text13 CODE 0 5A60 5A60 A0 1
+text14 CODE 0 5484 5484 2 1
+text15 CODE 0 5D08 5D08 104 1
+text16 CODE 0 5938 5938 92 1
+text17 CODE 0 58A6 58A6 92 1
+text18 CODE 0 5C04 5C04 104 1
+text19 CODE 0 615E 615E 122 1
+text20 CODE 0 603C 603C 122 1
+text21 CODE 0 5B00 5B00 104 1
+text22 CODE 0 570C 570C 76 1
+text23 CODE 0 5814 5814 92 1
+text24 CODE 0 5782 5782 92 1
+text25 CODE 0 54A0 54A0 1C 1
+text26 CODE 0 55F0 55F0 56 1
+text27 CODE 0 569C 569C 70 1
+text28 CODE 0 6280 6280 124 1
+text29 CODE 0 5E0C 5E0C 112 1
+text30 CODE 0 5F1E 5F1E 11E 1
+cstackCOMRAM COMRAM 1 1 1 5C 1
+cstackBANK0 BANK0 1 C5 C5 1C 1
+bssBANK0 BANK0 1 60 60 65 1
+bssCOMRAM COMRAM 1 5D 5D 2 1
+mediumconst MEDIUMCONST 0 7E86 7E86 17A 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM E1-7FF 1
+SFR F60-FFF 1
+BANK0 E1-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+CONST 4-5483 1
+STACK E1-7FF 1
+SMALLCONST 800-5483 1
+CODE 4-5483 1
+BIGRAM 5F-5F 1
+BIGRAM E1-7FF 1
+COMRAM 5F-5F 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 800-5483 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\Practica8_15_0.X.production.o
+5F1E text30 CODE >150:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5F20 text30 CODE >151:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5F24 text30 CODE >152:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5F62 text30 CODE >153:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5F9A text30 CODE >154:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5FA2 text30 CODE >155:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5FAC text30 CODE >156:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5FEE text30 CODE >157:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+6018 text30 CODE >158:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+6020 text30 CODE >159:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+602A text30 CODE >160:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+603A text30 CODE >161:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E0C text29 CODE >52:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E0C text29 CODE >54:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E0E text29 CODE >55:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E10 text29 CODE >56:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E12 text29 CODE >57:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E14 text29 CODE >58:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E16 text29 CODE >59:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E18 text29 CODE >60:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E1A text29 CODE >61:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E1C text29 CODE >62:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E1E text29 CODE >63:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E20 text29 CODE >64:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E22 text29 CODE >65:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E24 text29 CODE >66:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E34 text29 CODE >67:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E44 text29 CODE >68:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E54 text29 CODE >69:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E64 text29 CODE >70:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E74 text29 CODE >71:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E84 text29 CODE >72:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E88 text29 CODE >74:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E92 text29 CODE >75:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5E9C text29 CODE >76:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5EA0 text29 CODE >77:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5EA6 text29 CODE >78:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5EB0 text29 CODE >79:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5EB2 text29 CODE >80:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5EC2 text29 CODE >81:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5ECA text29 CODE >82:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5ED6 text29 CODE >83:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5EE2 text29 CODE >84:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5EE8 text29 CODE >85:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5EF4 text29 CODE >86:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5F04 text29 CODE >87:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5F0A text29 CODE >88:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5F10 text29 CODE >89:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5F16 text29 CODE >90:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5F1C text29 CODE >91:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+6280 text28 CODE >136:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+6282 text28 CODE >137:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+6286 text28 CODE >138:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+62C4 text28 CODE >139:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+62FC text28 CODE >140:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+6304 text28 CODE >141:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+630E text28 CODE >142:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+6350 text28 CODE >143:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+637A text28 CODE >144:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+6382 text28 CODE >145:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+638C text28 CODE >146:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+63A2 text28 CODE >147:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+569C text27 CODE >115:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+569E text27 CODE >118:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+56A0 text27 CODE >120:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+56A6 text27 CODE >121:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+56AC text27 CODE >122:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+56B2 text27 CODE >123:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+56BA text27 CODE >125:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+56E2 text27 CODE >126:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+56E8 text27 CODE >127:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+56EA text27 CODE >129:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+56F8 text27 CODE >130:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+56FC text27 CODE >127:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+55F0 text26 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul32.c
+55F0 text26 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul32.c
+5600 text26 CODE >121:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul32.c
+5604 text26 CODE >122:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul32.c
+5614 text26 CODE >123:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul32.c
+561E text26 CODE >124:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul32.c
+5628 text26 CODE >125:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul32.c
+5634 text26 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul32.c
+5644 text26 CODE >129:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul32.c
+54A0 text25 CODE >20:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+54A0 text25 CODE >21:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+54A4 text25 CODE >22:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+54A8 text25 CODE >23:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+54BA text25 CODE >24:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5782 text24 CODE >25:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5782 text24 CODE >26:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+578A text24 CODE >27:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+57A6 text24 CODE >28:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+57AE text24 CODE >29:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+57CA text24 CODE >30:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+57D2 text24 CODE >31:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+57EE text24 CODE >32:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+57F6 text24 CODE >33:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5812 text24 CODE >34:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5814 text23 CODE >64:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5814 text23 CODE >65:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+581C text23 CODE >66:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5838 text23 CODE >67:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5840 text23 CODE >68:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+585C text23 CODE >69:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5864 text23 CODE >70:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5880 text23 CODE >71:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5888 text23 CODE >72:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+58A4 text23 CODE >73:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+570C text22 CODE >94:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+570E text22 CODE >97:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5710 text22 CODE >99:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5716 text22 CODE >100:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+571C text22 CODE >101:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5722 text22 CODE >102:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+572A text22 CODE >104:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5752 text22 CODE >105:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5758 text22 CODE >106:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+575A text22 CODE >108:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+576A text22 CODE >109:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+576E text22 CODE >106:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/flex_lcd.h
+5B00 text21 CODE >102:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5B00 text21 CODE >103:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5B1A text21 CODE >104:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5B1C text21 CODE >105:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5B20 text21 CODE >104:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5B3E text21 CODE >107:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5B4E text21 CODE >108:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5B50 text21 CODE >109:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5B6C text21 CODE >110:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5B6E text21 CODE >111:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5B72 text21 CODE >110:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5B92 text21 CODE >115:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5BA4 text21 CODE >116:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5BAA text21 CODE >117:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5BC2 text21 CODE >118:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5BD4 text21 CODE >119:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5BE6 text21 CODE >120:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5BFC text21 CODE >121:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5C02 text21 CODE >123:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+603C text20 CODE >45:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+603C text20 CODE >46:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+6044 text20 CODE >47:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+6060 text20 CODE >48:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+6068 text20 CODE >49:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+6084 text20 CODE >50:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+608C text20 CODE >51:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+60A8 text20 CODE >52:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+60B0 text20 CODE >53:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+60CC text20 CODE >54:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+60D4 text20 CODE >55:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+60F0 text20 CODE >56:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+60F8 text20 CODE >57:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+6114 text20 CODE >58:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+611C text20 CODE >59:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+6138 text20 CODE >60:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+6140 text20 CODE >61:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+615C text20 CODE >62:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+615E text19 CODE >84:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+615E text19 CODE >85:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+6166 text19 CODE >86:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+6182 text19 CODE >87:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+618A text19 CODE >88:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+61A6 text19 CODE >89:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+61AE text19 CODE >90:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+61CA text19 CODE >91:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+61D2 text19 CODE >92:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+61EE text19 CODE >93:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+61F6 text19 CODE >94:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+6212 text19 CODE >95:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+621A text19 CODE >96:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+6236 text19 CODE >97:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+623E text19 CODE >98:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+625A text19 CODE >99:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+6262 text19 CODE >100:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+627E text19 CODE >101:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5C04 text18 CODE >146:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5C04 text18 CODE >147:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5C1E text18 CODE >148:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5C20 text18 CODE >149:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5C24 text18 CODE >148:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5C42 text18 CODE >151:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5C52 text18 CODE >152:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5C54 text18 CODE >153:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5C70 text18 CODE >154:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5C72 text18 CODE >155:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5C76 text18 CODE >154:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5C96 text18 CODE >159:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5CA8 text18 CODE >160:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5CAE text18 CODE >161:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5CC6 text18 CODE >162:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5CD8 text18 CODE >163:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5CEA text18 CODE >164:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5D00 text18 CODE >165:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5D06 text18 CODE >167:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+58A6 text17 CODE >35:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+58A6 text17 CODE >36:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+58AE text17 CODE >37:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+58CA text17 CODE >38:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+58D2 text17 CODE >39:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+58EE text17 CODE >40:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+58F6 text17 CODE >41:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5912 text17 CODE >42:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+591A text17 CODE >43:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5936 text17 CODE >44:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5938 text16 CODE >74:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5938 text16 CODE >75:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5940 text16 CODE >76:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+595C text16 CODE >77:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5964 text16 CODE >78:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5980 text16 CODE >79:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5988 text16 CODE >80:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+59A4 text16 CODE >81:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+59AC text16 CODE >82:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+59C8 text16 CODE >83:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5D08 text15 CODE >124:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5D08 text15 CODE >125:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5D22 text15 CODE >126:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5D24 text15 CODE >127:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5D28 text15 CODE >126:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5D46 text15 CODE >129:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5D56 text15 CODE >130:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5D58 text15 CODE >131:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5D74 text15 CODE >132:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5D76 text15 CODE >133:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5D7A text15 CODE >132:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5D9A text15 CODE >137:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5DAC text15 CODE >138:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5DB2 text15 CODE >139:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5DCA text15 CODE >140:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5DDC text15 CODE >141:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5DEE text15 CODE >142:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5E04 text15 CODE >143:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5E0A text15 CODE >145:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X/Prueba1.h
+5484 text14 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\putch.c
+5484 text14 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\putch.c
+5A60 text13 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
+5A60 text13 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
+5A70 text13 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
+5A76 text13 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
+5A78 text13 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
+5AB8 text13 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
+5AEC text13 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
+5AFE text13 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputc.c
+5518 text12 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputs.c
+5518 text12 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputs.c
+5520 text12 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputs.c
+5522 text12 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputs.c
+5534 text12 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputs.c
+5538 text12 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_fputs.c
+54BC text11 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+54BC text11 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+54C4 text11 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+54C6 text11 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+54CA text11 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+54D8 text11 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+54E4 text11 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\strlen.c
+59CA text10 CODE >72:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+59CA text10 CODE >77:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+59CE text10 CODE >78:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+59E2 text10 CODE >82:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+59F8 text10 CODE >83:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5A00 text10 CODE >84:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5A02 text10 CODE >85:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5A16 text10 CODE >86:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5A1A text10 CODE >84:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5A2E text10 CODE >90:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5A32 text10 CODE >91:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5A46 text10 CODE >94:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5A5E text10 CODE >95:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5550 text9 CODE >259:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5550 text9 CODE >264:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5570 text9 CODE >267:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5574 text9 CODE >268:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5578 text9 CODE >269:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+559C text9 CODE >270:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+64C8 text8 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+64C8 text8 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+64CC text8 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+64D0 text8 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+64F0 text8 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+64F4 text8 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+64F8 text8 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+6518 text8 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+651C text8 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+6528 text8 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+653C text8 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+6540 text8 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+6542 text8 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+6554 text8 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+6556 text8 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+655A text8 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+656C text8 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+6590 text8 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+65B0 text8 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+65B2 text8 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+65C4 text8 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+65C8 text8 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+65CE text8 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+65EE text8 CODE >42:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+660E text8 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aodiv.c
+63A4 text7 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+63A4 text7 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+63A8 text7 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+63AC text7 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+63CC text7 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+63D0 text7 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+63D4 text7 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+63F4 text7 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+6408 text7 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+640C text7 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+640E text7 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+6420 text7 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+6422 text7 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+6426 text7 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+644A text7 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+646A text7 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+647C text7 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+6480 text7 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+6486 text7 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+64A6 text7 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+64C6 text7 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\aomod.c
+54E6 text6 CODE >1:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\abs.c
+54E6 text6 CODE >3:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\abs.c
+5516 text6 CODE >4:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\abs.c
+6974 text5 CODE >274:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6974 text5 CODE >280:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6994 text5 CODE >281:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+69A2 text5 CODE >282:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+69AA text5 CODE >283:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+69CA text5 CODE >287:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+69CE text5 CODE >288:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+69D0 text5 CODE >290:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+69F0 text5 CODE >291:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+69F8 text5 CODE >292:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6A04 text5 CODE >293:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6A0A text5 CODE >297:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6A12 text5 CODE >298:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6A16 text5 CODE >299:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6A18 text5 CODE >300:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6A1E text5 CODE >301:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6AA0 text5 CODE >302:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6AA6 text5 CODE >303:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6AAC text5 CODE >304:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6B10 text5 CODE >299:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6B52 text5 CODE >308:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6B5E text5 CODE >309:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6B64 text5 CODE >310:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6B8C text5 CODE >314:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6BB4 text5 CODE >315:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+678C text4 CODE >670:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+678C text4 CODE >680:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+67A6 text4 CODE >681:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+67B4 text4 CODE >683:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+67C6 text4 CODE >684:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+67CA text4 CODE >792:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+67E4 text4 CODE >793:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+67F2 text4 CODE >794:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6816 text4 CODE >795:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6830 text4 CODE >825:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6864 text4 CODE >827:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6872 text4 CODE >828:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+68AC text4 CODE >830:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+68E2 text4 CODE >1350:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+68FC text4 CODE >1351:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+690A text4 CODE >1352:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+691E text4 CODE >1353:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6928 text4 CODE >1357:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6936 text4 CODE >1358:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6940 text4 CODE >1362:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+6964 text4 CODE >1363:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5646 text3 CODE >1368:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5646 text3 CODE >1373:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+564E text3 CODE >1374:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5658 text3 CODE >1375:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+565A text3 CODE >1376:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5680 text3 CODE >1375:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+5692 text3 CODE >1378:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+569A text3 CODE >1382:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\doprnt.c
+559E text2 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
+559E text2 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
+55A8 text2 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
+55B0 text2 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
+55B8 text2 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
+55C0 text2 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
+55DC text2 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
+55EE text2 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\nf_sprintf.c
+6610 text1 CODE >324:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6610 text1 CODE >325:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6622 text1 CODE >326:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6626 text1 CODE >327:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+662E text1 CODE >328:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6632 text1 CODE >329:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6646 text1 CODE >330:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+665A text1 CODE >331:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+666E text1 CODE >332:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6682 text1 CODE >333:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6686 text1 CODE >334:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+669A text1 CODE >335:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+66AE text1 CODE >336:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+66C2 text1 CODE >337:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+66D6 text1 CODE >338:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+66DA text1 CODE >339:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+66EE text1 CODE >340:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6702 text1 CODE >341:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6716 text1 CODE >342:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+672A text1 CODE >343:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+672E text1 CODE >344:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6742 text1 CODE >345:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6756 text1 CODE >346:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+676A text1 CODE >347:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+677E text1 CODE >348:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+677E text1 CODE >349:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6782 text1 CODE >350:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6BB6 text0 CODE >19:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6BB6 text0 CODE >20:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6BBA text0 CODE >21:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6BBC text0 CODE >22:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6BC0 text0 CODE >23:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6BC4 text0 CODE >24:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6BC8 text0 CODE >25:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6BCC text0 CODE >26:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6BD0 text0 CODE >27:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6BD6 text0 CODE >28:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6BDC text0 CODE >29:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6BF4 text0 CODE >35:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6C06 text0 CODE >36:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6C18 text0 CODE >37:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6C30 text0 CODE >38:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6C36 text0 CODE >39:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6C4E text0 CODE >40:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6C60 text0 CODE >41:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6C72 text0 CODE >42:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6C8A text0 CODE >43:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6C90 text0 CODE >44:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6CA8 text0 CODE >45:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6CBA text0 CODE >46:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6CCC text0 CODE >47:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6CE4 text0 CODE >49:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6D1A text0 CODE >50:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6D20 text0 CODE >51:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6D38 text0 CODE >52:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6D4A text0 CODE >53:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6D62 text0 CODE >54:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6D68 text0 CODE >55:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6D80 text0 CODE >56:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6D8A text0 CODE >58:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6D90 text0 CODE >59:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6DA8 text0 CODE >60:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6DBA text0 CODE >61:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6DCC text0 CODE >62:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6DE4 text0 CODE >63:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6DEA text0 CODE >64:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6E02 text0 CODE >65:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6E14 text0 CODE >66:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6E16 text0 CODE >67:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6E1A text0 CODE >68:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6E46 text0 CODE >69:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6E4A text0 CODE >70:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6E64 text0 CODE >71:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6E76 text0 CODE >66:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6E86 text0 CODE >74:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6E8C text0 CODE >75:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6EA4 text0 CODE >76:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6EA8 text0 CODE >77:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6EBC text0 CODE >78:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6ECE text0 CODE >79:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6EE0 text0 CODE >80:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6EF6 text0 CODE >81:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6EFC text0 CODE >82:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6F14 text0 CODE >83:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6F26 text0 CODE >84:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6F38 text0 CODE >85:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6F4E text0 CODE >86:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6F54 text0 CODE >87:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6F6C text0 CODE >88:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6F7E text0 CODE >89:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6F90 text0 CODE >90:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6FA6 text0 CODE >91:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6FAC text0 CODE >92:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6FC4 text0 CODE >93:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6FD6 text0 CODE >94:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6FE8 text0 CODE >95:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6FEA text0 CODE >96:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+6FEE text0 CODE >97:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+700C text0 CODE >98:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7010 text0 CODE >99:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+702A text0 CODE >100:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+703C text0 CODE >101:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+704E text0 CODE >102:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+705E text0 CODE >95:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+705E text0 CODE >103:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+706E text0 CODE >106:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+707E text0 CODE >107:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7084 text0 CODE >108:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+709C text0 CODE >109:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+70AE text0 CODE >110:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+70C0 text0 CODE >111:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+70D6 text0 CODE >112:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+70DC text0 CODE >113:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+70F4 text0 CODE >114:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7106 text0 CODE >115:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7118 text0 CODE >116:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+712E text0 CODE >117:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7134 text0 CODE >118:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+714C text0 CODE >119:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+714E text0 CODE >120:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7152 text0 CODE >121:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7164 text0 CODE >122:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7176 text0 CODE >123:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7198 text0 CODE >124:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+71EE text0 CODE >125:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7212 text0 CODE >126:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7224 text0 CODE >128:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7234 text0 CODE >129:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+724C text0 CODE >130:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+726C text0 CODE >131:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7272 text0 CODE >132:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+728A text0 CODE >133:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+729C text0 CODE >134:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+72AE text0 CODE >135:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+72C6 text0 CODE >136:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+72CC text0 CODE >137:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+72E4 text0 CODE >138:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+72F6 text0 CODE >139:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7308 text0 CODE >140:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7320 text0 CODE >141:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7328 text0 CODE >119:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7338 text0 CODE >145:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7348 text0 CODE >146:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+734E text0 CODE >147:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7366 text0 CODE >148:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7378 text0 CODE >149:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7394 text0 CODE >150:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7398 text0 CODE >151:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+739A text0 CODE >153:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+73AE text0 CODE >154:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+73C0 text0 CODE >155:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+73D2 text0 CODE >156:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+73E8 text0 CODE >157:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+73EE text0 CODE >158:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7406 text0 CODE >159:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7418 text0 CODE >160:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+742A text0 CODE >161:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7440 text0 CODE >162:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7446 text0 CODE >163:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+745E text0 CODE >164:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7470 text0 CODE >165:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7482 text0 CODE >166:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7498 text0 CODE >167:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+749E text0 CODE >168:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+74B6 text0 CODE >169:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+74C8 text0 CODE >170:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+74DA text0 CODE >171:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+74DC text0 CODE >172:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+74E0 text0 CODE >173:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+74FE text0 CODE >174:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7502 text0 CODE >175:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+751C text0 CODE >176:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+752E text0 CODE >177:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7540 text0 CODE >178:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7550 text0 CODE >171:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7550 text0 CODE >179:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7560 text0 CODE >182:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7570 text0 CODE >183:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7576 text0 CODE >184:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+758E text0 CODE >185:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+75A0 text0 CODE >186:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+75B2 text0 CODE >187:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+75C8 text0 CODE >188:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+75CE text0 CODE >189:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+75E6 text0 CODE >190:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+75F8 text0 CODE >191:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+760A text0 CODE >192:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7620 text0 CODE >193:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7626 text0 CODE >194:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+763E text0 CODE >195:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7640 text0 CODE >196:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7644 text0 CODE >197:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7656 text0 CODE >198:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7668 text0 CODE >199:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+768A text0 CODE >200:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+76E0 text0 CODE >201:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7704 text0 CODE >202:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7716 text0 CODE >204:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7726 text0 CODE >205:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+773E text0 CODE >206:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+775E text0 CODE >207:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7764 text0 CODE >208:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+777C text0 CODE >209:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+778E text0 CODE >210:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+77A0 text0 CODE >211:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+77B8 text0 CODE >212:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+77BE text0 CODE >213:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+77D6 text0 CODE >214:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+77E8 text0 CODE >215:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+77FA text0 CODE >216:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7812 text0 CODE >217:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+781A text0 CODE >195:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+782A text0 CODE >221:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+783A text0 CODE >222:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7840 text0 CODE >223:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7858 text0 CODE >224:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+786A text0 CODE >225:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7888 text0 CODE >229:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+789C text0 CODE >230:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+78AE text0 CODE >231:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+78C0 text0 CODE >232:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+78D6 text0 CODE >233:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+78DC text0 CODE >234:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+78F4 text0 CODE >235:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7906 text0 CODE >236:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7918 text0 CODE >237:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+792E text0 CODE >238:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7934 text0 CODE >239:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+794C text0 CODE >240:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+795E text0 CODE >241:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7970 text0 CODE >242:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7986 text0 CODE >243:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+798C text0 CODE >244:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+79A4 text0 CODE >245:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+79B6 text0 CODE >246:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+79C8 text0 CODE >247:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+79CA text0 CODE >248:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+79CE text0 CODE >249:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+79EC text0 CODE >250:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+79F0 text0 CODE >251:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7A0A text0 CODE >252:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7A1C text0 CODE >253:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7A2E text0 CODE >254:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7A3E text0 CODE >247:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7A3E text0 CODE >255:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7A4E text0 CODE >258:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7A5E text0 CODE >259:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7A64 text0 CODE >260:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7A7C text0 CODE >261:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7A8E text0 CODE >262:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7AA0 text0 CODE >263:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7AB6 text0 CODE >264:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7ABC text0 CODE >265:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7AD4 text0 CODE >266:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7AE6 text0 CODE >267:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7AF8 text0 CODE >268:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7B0E text0 CODE >269:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7B14 text0 CODE >270:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7B2C text0 CODE >271:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7B2E text0 CODE >272:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7B32 text0 CODE >273:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7B44 text0 CODE >274:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7B56 text0 CODE >275:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7B78 text0 CODE >276:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7BCE text0 CODE >277:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7BF2 text0 CODE >278:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7C04 text0 CODE >280:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7C14 text0 CODE >281:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7C2C text0 CODE >282:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7C4C text0 CODE >283:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7C52 text0 CODE >284:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7C6A text0 CODE >285:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7C7C text0 CODE >286:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7C8E text0 CODE >287:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7CA6 text0 CODE >288:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7CAC text0 CODE >289:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7CC4 text0 CODE >290:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7CD6 text0 CODE >291:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7CE8 text0 CODE >292:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7D00 text0 CODE >293:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7D08 text0 CODE >271:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7D18 text0 CODE >297:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7D28 text0 CODE >298:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7D2E text0 CODE >299:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7D46 text0 CODE >300:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7D58 text0 CODE >301:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7D78 text0 CODE >306:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7D88 text0 CODE >307:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7D8E text0 CODE >308:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7DA6 text0 CODE >309:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7DB8 text0 CODE >310:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7DCA text0 CODE >311:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7DE0 text0 CODE >312:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7DE6 text0 CODE >313:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7DFE text0 CODE >314:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7E10 text0 CODE >315:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7E22 text0 CODE >316:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7E3A text0 CODE >317:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7E40 text0 CODE >318:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7E58 text0 CODE >319:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+7E5C text0 CODE >321:C:\Users\Emmanuel\MPLABXProjects\Practica8_15_0.X\Practica8_15_03_19.c
+5486 cinit CODE >1106:C:\Users\Emmanuel\AppData\Local\Temp\sa8c.
+5486 cinit CODE >1108:C:\Users\Emmanuel\AppData\Local\Temp\sa8c.
+5486 cinit CODE >1111:C:\Users\Emmanuel\AppData\Local\Temp\sa8c.
+5486 cinit CODE >1151:C:\Users\Emmanuel\AppData\Local\Temp\sa8c.
+548A cinit CODE >1152:C:\Users\Emmanuel\AppData\Local\Temp\sa8c.
+548C cinit CODE >1153:C:\Users\Emmanuel\AppData\Local\Temp\sa8c.
+548C cinit CODE >1154:C:\Users\Emmanuel\AppData\Local\Temp\sa8c.
+548E cinit CODE >1155:C:\Users\Emmanuel\AppData\Local\Temp\sa8c.
+5490 cinit CODE >1156:C:\Users\Emmanuel\AppData\Local\Temp\sa8c.
+5492 cinit CODE >1159:C:\Users\Emmanuel\AppData\Local\Temp\sa8c.
+5494 cinit CODE >1160:C:\Users\Emmanuel\AppData\Local\Temp\sa8c.
+5496 cinit CODE >1166:C:\Users\Emmanuel\AppData\Local\Temp\sa8c.
+5496 cinit CODE >1169:C:\Users\Emmanuel\AppData\Local\Temp\sa8c.
+5498 cinit CODE >1170:C:\Users\Emmanuel\AppData\Local\Temp\sa8c.
+549A cinit CODE >1171:C:\Users\Emmanuel\AppData\Local\Temp\sa8c.
+549C cinit CODE >1172:C:\Users\Emmanuel\AppData\Local\Temp\sa8c.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Lmediumconst 7E86 0 MEDIUMCONST 0 mediumconst dist/default/production\Practica8_15_0.X.production.o
+__Hspace_0 30000E 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__Hspace_1 E1 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__Hspace_2 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_Lcd_Init 5E0C 0 CODE 0 text29 dist/default/production\Practica8_15_0.X.production.o
+_Lcd_Out2 569C 0 CODE 0 text27 dist/default/production\Practica8_15_0.X.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\Practica8_15_0.X.production.o
+__mediumconst 7E86 0 MEDIUMCONST 0 mediumconst C:\Users\Emmanuel\AppData\Local\Temp\sa8c.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Practica8_15_0.X.production.o
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__end_of_Lcd_Init 5F1E 0 CODE 0 text29 dist/default/production\Practica8_15_0.X.production.o
+__end_of_Lcd_Out2 570C 0 CODE 0 text27 dist/default/production\Practica8_15_0.X.production.o
+?_abs 13 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+?_pad 11 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+main@i D7 0 BANK0 1 cstackBANK0 dist/default/production\Practica8_15_0.X.production.o
+?_vfprintf 51 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\Practica8_15_0.X.production.o
+_LATB F8A 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\Emmanuel\AppData\Local\Temp\sa8c.o
+_ctoa 5550 0 CODE 0 text9 dist/default/production\Practica8_15_0.X.production.o
+_dbuf 72 0 BANK0 1 bssBANK0 dist/default/production\Practica8_15_0.X.production.o
+_dtoa 6974 0 CODE 0 text5 dist/default/production\Practica8_15_0.X.production.o
+_main 6BB6 0 CODE 0 text0 dist/default/production\Practica8_15_0.X.production.o
+_nout 6C 0 BANK0 1 bssBANK0 dist/default/production\Practica8_15_0.X.production.o
+_prec 70 0 BANK0 1 bssBANK0 dist/default/production\Practica8_15_0.X.production.o
+abs@a 13 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+pad@i 18 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+pad@p 15 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+pad@w 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+Lcd_Out2@x 4 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+Lcd_Out2@y 9 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+start 0 0 CODE 0 init C:\Users\Emmanuel\AppData\Local\Temp\sa8c.o
+___aomod@counter 11 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__size_of___aodiv 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__size_of___aomod 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__size_of_ctoa 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__size_of_dtoa 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__size_of_main 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Practica8_15_0.X.production.o
+pad@fp 11 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+?___lmul 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__Hpowerup 0 0 CODE 0 powerup dist/default/production\Practica8_15_0.X.production.o
+__end_of_vfpfcnvrt 6974 0 CODE 0 text4 dist/default/production\Practica8_15_0.X.production.o
+__size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__accesstop 60 0 ABS 0 - C:\Users\Emmanuel\AppData\Local\Temp\sa8c.o
+intlevel0 0 0 CODE 0 text C:\Users\Emmanuel\AppData\Local\Temp\sa8c.o
+intlevel1 0 0 CODE 0 text C:\Users\Emmanuel\AppData\Local\Temp\sa8c.o
+intlevel2 0 0 CODE 0 text C:\Users\Emmanuel\AppData\Local\Temp\sa8c.o
+intlevel3 0 0 CODE 0 text C:\Users\Emmanuel\AppData\Local\Temp\sa8c.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__CFG_USBDIV$1 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+Lcd_Chr_CP@data 3 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Practica8_15_0.X.production.o
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_Lcd_Chr_CP 6280 0 CODE 0 text28 dist/default/production\Practica8_15_0.X.production.o
+opt_Full_stepper@steps B 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\Practica8_15_0.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\Practica8_15_0.X.production.o
+_vfpfcnvrt 678C 0 CODE 0 text4 dist/default/production\Practica8_15_0.X.production.o
+dtoa@fp 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+_ADCON1 FC1 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\Emmanuel\AppData\Local\Temp\sa8c.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\Emmanuel\AppData\Local\Temp\sa8c.o
+_Wave_stepper 58A6 0 CODE 0 text17 dist/default/production\Practica8_15_0.X.production.o
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\Practica8_15_0.X.production.o
+__end_of___lmul 5646 0 CODE 0 text26 dist/default/production\Practica8_15_0.X.production.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Practica8_15_0.X.production.o
+main@dir DA 0 BANK0 1 cstackBANK0 dist/default/production\Practica8_15_0.X.production.o
+__size_of_sprintf 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__Hmediumconst 8000 0 MEDIUMCONST 0 mediumconst dist/default/production\Practica8_15_0.X.production.o
+__Hintcodelo 0 0 CODE 0 intcodelo dist/default/production\Practica8_15_0.X.production.o
+__end_of___aodiv 6610 0 CODE 0 text8 dist/default/production\Practica8_15_0.X.production.o
+__end_of___aomod 64C8 0 CODE 0 text7 dist/default/production\Practica8_15_0.X.production.o
+Lcd_Out2@buffer 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+_Pasos_fun 60 0 BANK0 1 bssBANK0 dist/default/production\Practica8_15_0.X.production.o
+_Full_stepper_izq 5814 0 CODE 0 text23 dist/default/production\Practica8_15_0.X.production.o
+___aodiv@quotient 13 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+?_strlen 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__CFG_CCP2MX$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+___aomod@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__end_of_Lcd_Chr_CP 63A4 0 CODE 0 text28 dist/default/production\Practica8_15_0.X.production.o
+__size_of_fputc 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__size_of_fputs 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__size_of_initM 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__size_of_putch 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__size_of_Wave_stepper 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_INTCON2bits FF1 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__Lintcodelo 0 0 CODE 0 intcodelo dist/default/production\Practica8_15_0.X.production.o
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+___aomod@divisor 9 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+start_initialization 5486 0 CODE 0 cinit dist/default/production\Practica8_15_0.X.production.o
+_opt_Wave_stepper 5D08 0 CODE 0 text15 dist/default/production\Practica8_15_0.X.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Practica8_15_0.X.production.o
+_TRISDbits F95 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+___rparam_used 1 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__pcstackBANK0 C5 0 BANK0 1 cstackBANK0 dist/default/production\Practica8_15_0.X.production.o
+__end_of_Wave_stepper 5938 0 CODE 0 text17 dist/default/production\Practica8_15_0.X.production.o
+_dtoa$523 2E 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__size_of_Lcd_Cmd 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__size_of_Lcd_Out 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+fputc@fp 3 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+fputs@fp C 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+_Full_stepper 5782 0 CODE 0 text24 dist/default/production\Practica8_15_0.X.production.o
+__Hbank0 0 0 ABS 0 bank0 dist/default/production\Practica8_15_0.X.production.o
+__Hbank1 0 0 ABS 0 bank1 dist/default/production\Practica8_15_0.X.production.o
+__Hbank2 0 0 ABS 0 bank2 dist/default/production\Practica8_15_0.X.production.o
+__Hbank3 0 0 ABS 0 bank3 dist/default/production\Practica8_15_0.X.production.o
+__Hbank4 0 0 ABS 0 bank4 dist/default/production\Practica8_15_0.X.production.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\Practica8_15_0.X.production.o
+__Hbank6 0 0 ABS 0 bank6 dist/default/production\Practica8_15_0.X.production.o
+__Hbank7 0 0 ABS 0 bank7 dist/default/production\Practica8_15_0.X.production.o
+__Hcinit 0 0 ABS 0 cinit dist/default/production\Practica8_15_0.X.production.o
+__Hconst 0 0 CONST 0 const dist/default/production\Practica8_15_0.X.production.o
+__end_of_strlen 54E6 0 CODE 0 text11 dist/default/production\Practica8_15_0.X.production.o
+__Hidata 0 0 CODE 0 idata dist/default/production\Practica8_15_0.X.production.o
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/production\Practica8_15_0.X.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\Practica8_15_0.X.production.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\Practica8_15_0.X.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\Practica8_15_0.X.production.o
+__Hstack 0 0 STACK 2 stack dist/default/production\Practica8_15_0.X.production.o
+__Htext0 0 0 ABS 0 text0 dist/default/production\Practica8_15_0.X.production.o
+__Htext1 0 0 ABS 0 text1 dist/default/production\Practica8_15_0.X.production.o
+__Htext2 0 0 ABS 0 text2 dist/default/production\Practica8_15_0.X.production.o
+__Htext3 0 0 ABS 0 text3 dist/default/production\Practica8_15_0.X.production.o
+__Htext4 0 0 ABS 0 text4 dist/default/production\Practica8_15_0.X.production.o
+__Htext5 0 0 ABS 0 text5 dist/default/production\Practica8_15_0.X.production.o
+__Htext6 0 0 ABS 0 text6 dist/default/production\Practica8_15_0.X.production.o
+__Htext7 0 0 ABS 0 text7 dist/default/production\Practica8_15_0.X.production.o
+__Htext8 0 0 ABS 0 text8 dist/default/production\Practica8_15_0.X.production.o
+__Htext9 0 0 ABS 0 text9 dist/default/production\Practica8_15_0.X.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Practica8_15_0.X.production.o
+__Hbigram 0 0 ABS 0 bigram dist/default/production\Practica8_15_0.X.production.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Emmanuel\AppData\Local\Temp\sa8c.o
+Lcd_Out@data A 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__end_of_sprintf 55F0 0 CODE 0 text2 dist/default/production\Practica8_15_0.X.production.o
+__Hcomram 0 0 ABS 0 comram dist/default/production\Practica8_15_0.X.production.o
+__Hconfig 30000E 0 CONFIG 0 config dist/default/production\Practica8_15_0.X.production.o
+__end_of_Full_stepper_izq 58A6 0 CODE 0 text23 dist/default/production\Practica8_15_0.X.production.o
+__size_of_teclado 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__Lbank0 0 0 ABS 0 bank0 dist/default/production\Practica8_15_0.X.production.o
+__Lbank1 0 0 ABS 0 bank1 dist/default/production\Practica8_15_0.X.production.o
+__Lbank2 0 0 ABS 0 bank2 dist/default/production\Practica8_15_0.X.production.o
+__Lbank3 0 0 ABS 0 bank3 dist/default/production\Practica8_15_0.X.production.o
+__Lbank4 0 0 ABS 0 bank4 dist/default/production\Practica8_15_0.X.production.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\Practica8_15_0.X.production.o
+__Lbank6 0 0 ABS 0 bank6 dist/default/production\Practica8_15_0.X.production.o
+__Lbank7 0 0 ABS 0 bank7 dist/default/production\Practica8_15_0.X.production.o
+__Lcinit 0 0 ABS 0 cinit dist/default/production\Practica8_15_0.X.production.o
+__Lconst 0 0 CONST 0 const dist/default/production\Practica8_15_0.X.production.o
+__Lidata 0 0 CODE 0 idata dist/default/production\Practica8_15_0.X.production.o
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/production\Practica8_15_0.X.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\Practica8_15_0.X.production.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\Practica8_15_0.X.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\Practica8_15_0.X.production.o
+__Lstack 0 0 STACK 2 stack dist/default/production\Practica8_15_0.X.production.o
+__Ltext0 0 0 ABS 0 text0 dist/default/production\Practica8_15_0.X.production.o
+__Ltext1 0 0 ABS 0 text1 dist/default/production\Practica8_15_0.X.production.o
+__Ltext2 0 0 ABS 0 text2 dist/default/production\Practica8_15_0.X.production.o
+__Ltext3 0 0 ABS 0 text3 dist/default/production\Practica8_15_0.X.production.o
+__Ltext4 0 0 ABS 0 text4 dist/default/production\Practica8_15_0.X.production.o
+__Ltext5 0 0 ABS 0 text5 dist/default/production\Practica8_15_0.X.production.o
+__Ltext6 0 0 ABS 0 text6 dist/default/production\Practica8_15_0.X.production.o
+__Ltext7 0 0 ABS 0 text7 dist/default/production\Practica8_15_0.X.production.o
+__Ltext8 0 0 ABS 0 text8 dist/default/production\Practica8_15_0.X.production.o
+__Ltext9 0 0 ABS 0 text9 dist/default/production\Practica8_15_0.X.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\Practica8_15_0.X.production.o
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\Practica8_15_0.X.production.o
+_Wave_stepper_izq 5938 0 CODE 0 text16 dist/default/production\Practica8_15_0.X.production.o
+__size_of_Full_stepper_izq 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_PORTAbits F80 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_PORTBbits F81 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_PORTDbits F83 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__Habs1 0 0 ABS 0 abs1 dist/default/production\Practica8_15_0.X.production.o
+__Hdata 0 0 ABS 0 data dist/default/production\Practica8_15_0.X.production.o
+__Hinit 4 0 CODE 0 init dist/default/production\Practica8_15_0.X.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\Practica8_15_0.X.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\Practica8_15_0.X.production.o
+__Htemp 0 0 COMRAM 1 temp dist/default/production\Practica8_15_0.X.production.o
+__Htext 0 0 ABS 0 text dist/default/production\Practica8_15_0.X.production.o
+__Labs1 0 0 ABS 0 abs1 dist/default/production\Practica8_15_0.X.production.o
+__Ldata 0 0 ABS 0 data dist/default/production\Practica8_15_0.X.production.o
+__Linit 0 0 CODE 0 init dist/default/production\Practica8_15_0.X.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\Practica8_15_0.X.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\Practica8_15_0.X.production.o
+__Ltemp 0 0 COMRAM 1 temp dist/default/production\Practica8_15_0.X.production.o
+__Ltext 0 0 ABS 0 text dist/default/production\Practica8_15_0.X.production.o
+__CFG_XINST$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+___aodiv@counter 11 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+___lmul 55F0 0 CODE 0 text26 dist/default/production\Practica8_15_0.X.production.o
+___aomod@sign 12 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\Practica8_15_0.X.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__Hintret 0 0 ABS 0 intret dist/default/production\Practica8_15_0.X.production.o
+__Hirdata 0 0 CODE 0 irdata dist/default/production\Practica8_15_0.X.production.o
+__S0 30000E 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__S1 E1 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__S2 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_abs 54E6 0 CODE 0 text6 dist/default/production\Practica8_15_0.X.production.o
+_pad 59CA 0 CODE 0 text10 dist/default/production\Practica8_15_0.X.production.o
+__CFG_VREGEN$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__end_of_opt_Wave_stepper 5E0C 0 CODE 0 text15 dist/default/production\Practica8_15_0.X.production.o
+opt_Full_stepper@direttion F 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__size_of_Full_stepper 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+opt_Wave_stepper@steps B 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__CFG_PLLDIV$1 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_opt_Full_stepper 5B00 0 CODE 0 text21 dist/default/production\Practica8_15_0.X.production.o
+__size_of_opt_Wave_stepper 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__CFG_PBADEN$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+___aodiv@sign 12 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Practica8_15_0.X.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\Practica8_15_0.X.production.o
+sprintf@fmt C7 0 BANK0 1 cstackBANK0 dist/default/production\Practica8_15_0.X.production.o
+__end_of_abs 5518 0 CODE 0 text6 dist/default/production\Practica8_15_0.X.production.o
+__end_of_pad 5A60 0 CODE 0 text10 dist/default/production\Practica8_15_0.X.production.o
+__Lintentry 0 0 ABS 0 intentry dist/default/production\Practica8_15_0.X.production.o
+__end_of_Full_stepper 5814 0 CODE 0 text24 dist/default/production\Practica8_15_0.X.production.o
+__Hramtop 800 0 RAM 0 ramtop dist/default/production\Practica8_15_0.X.production.o
+strlen@a 3 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+strlen@s 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\Practica8_15_0.X.production.o
+__activetblptr 2 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__end_of_Lcd_Cmd 603C 0 CODE 0 text30 dist/default/production\Practica8_15_0.X.production.o
+__end_of_Lcd_Out 5782 0 CODE 0 text22 dist/default/production\Practica8_15_0.X.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\Practica8_15_0.X.production.o
+__size_of___lmul 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\Practica8_15_0.X.production.o
+__Htext10 0 0 ABS 0 text10 dist/default/production\Practica8_15_0.X.production.o
+__Htext11 0 0 ABS 0 text11 dist/default/production\Practica8_15_0.X.production.o
+__Htext12 0 0 ABS 0 text12 dist/default/production\Practica8_15_0.X.production.o
+__Htext13 0 0 ABS 0 text13 dist/default/production\Practica8_15_0.X.production.o
+__Htext14 0 0 ABS 0 text14 dist/default/production\Practica8_15_0.X.production.o
+__Htext15 0 0 ABS 0 text15 dist/default/production\Practica8_15_0.X.production.o
+__Htext16 0 0 ABS 0 text16 dist/default/production\Practica8_15_0.X.production.o
+__Htext17 0 0 ABS 0 text17 dist/default/production\Practica8_15_0.X.production.o
+__Htext18 0 0 ABS 0 text18 dist/default/production\Practica8_15_0.X.production.o
+__Htext19 0 0 ABS 0 text19 dist/default/production\Practica8_15_0.X.production.o
+__Htext20 0 0 ABS 0 text20 dist/default/production\Practica8_15_0.X.production.o
+__Htext21 0 0 ABS 0 text21 dist/default/production\Practica8_15_0.X.production.o
+__Htext22 0 0 ABS 0 text22 dist/default/production\Practica8_15_0.X.production.o
+__Htext23 0 0 ABS 0 text23 dist/default/production\Practica8_15_0.X.production.o
+__Htext24 0 0 ABS 0 text24 dist/default/production\Practica8_15_0.X.production.o
+__Htext25 0 0 ABS 0 text25 dist/default/production\Practica8_15_0.X.production.o
+__Htext26 0 0 ABS 0 text26 dist/default/production\Practica8_15_0.X.production.o
+__Htext27 0 0 ABS 0 text27 dist/default/production\Practica8_15_0.X.production.o
+__Htext28 0 0 ABS 0 text28 dist/default/production\Practica8_15_0.X.production.o
+__Htext29 0 0 ABS 0 text29 dist/default/production\Practica8_15_0.X.production.o
+__Htext30 0 0 ABS 0 text30 dist/default/production\Practica8_15_0.X.production.o
+vfpfcnvrt@fmt 42 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__size_of_Lcd_Chr_CP 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+pad@buf 13 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__ptext10 59CA 0 CODE 0 text10 dist/default/production\Practica8_15_0.X.production.o
+__ptext11 54BC 0 CODE 0 text11 dist/default/production\Practica8_15_0.X.production.o
+__ptext12 5518 0 CODE 0 text12 dist/default/production\Practica8_15_0.X.production.o
+__ptext13 5A60 0 CODE 0 text13 dist/default/production\Practica8_15_0.X.production.o
+__ptext14 5484 0 CODE 0 text14 dist/default/production\Practica8_15_0.X.production.o
+__ptext15 5D08 0 CODE 0 text15 dist/default/production\Practica8_15_0.X.production.o
+__ptext16 5938 0 CODE 0 text16 dist/default/production\Practica8_15_0.X.production.o
+__ptext17 58A6 0 CODE 0 text17 dist/default/production\Practica8_15_0.X.production.o
+__ptext18 5C04 0 CODE 0 text18 dist/default/production\Practica8_15_0.X.production.o
+__ptext19 615E 0 CODE 0 text19 dist/default/production\Practica8_15_0.X.production.o
+__ptext20 603C 0 CODE 0 text20 dist/default/production\Practica8_15_0.X.production.o
+__ptext21 5B00 0 CODE 0 text21 dist/default/production\Practica8_15_0.X.production.o
+__ptext22 570C 0 CODE 0 text22 dist/default/production\Practica8_15_0.X.production.o
+__ptext23 5814 0 CODE 0 text23 dist/default/production\Practica8_15_0.X.production.o
+__ptext24 5782 0 CODE 0 text24 dist/default/production\Practica8_15_0.X.production.o
+__ptext25 54A0 0 CODE 0 text25 dist/default/production\Practica8_15_0.X.production.o
+__ptext26 55F0 0 CODE 0 text26 dist/default/production\Practica8_15_0.X.production.o
+__ptext27 569C 0 CODE 0 text27 dist/default/production\Practica8_15_0.X.production.o
+__ptext28 6280 0 CODE 0 text28 dist/default/production\Practica8_15_0.X.production.o
+__ptext29 5E0C 0 CODE 0 text29 dist/default/production\Practica8_15_0.X.production.o
+__ptext30 5F1E 0 CODE 0 text30 dist/default/production\Practica8_15_0.X.production.o
+___aodiv 64C8 0 CODE 0 text8 dist/default/production\Practica8_15_0.X.production.o
+___aomod 63A4 0 CODE 0 text7 dist/default/production\Practica8_15_0.X.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Practica8_15_0.X.production.o
+__Lbigram 0 0 ABS 0 bigram dist/default/production\Practica8_15_0.X.production.o
+__CFG_BOR$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__end_of_teclado 678C 0 CODE 0 text1 dist/default/production\Practica8_15_0.X.production.o
+___lmul@multiplier 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__CFG_BORV$3 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+?_ctoa 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+?_dtoa 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__Lcomram 0 0 ABS 0 comram dist/default/production\Practica8_15_0.X.production.o
+__Lconfig 300000 0 CONFIG 0 config dist/default/production\Practica8_15_0.X.production.o
+__end_of_Wave_stepper_izq 59CA 0 CODE 0 text16 dist/default/production\Practica8_15_0.X.production.o
+_Half_stepper 603C 0 CODE 0 text20 dist/default/production\Practica8_15_0.X.production.o
+Lcd_Out@buffer 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\Practica8_15_0.X.production.o
+__size_of_Wave_stepper_izq 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+main@pasos DD 0 BANK0 1 cstackBANK0 dist/default/production\Practica8_15_0.X.production.o
+_strlen 54BC 0 CODE 0 text11 dist/default/production\Practica8_15_0.X.production.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\Practica8_15_0.X.production.o
+__size_of_vfprintf 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+stackhi 7FF 0 ABS 0 - C:\Users\Emmanuel\AppData\Local\Temp\sa8c.o
+stacklo E1 0 ABS 0 - C:\Users\Emmanuel\AppData\Local\Temp\sa8c.o
+__Lintcode 0 0 CODE 0 intcode dist/default/production\Practica8_15_0.X.production.o
+__Lintret 0 0 ABS 0 intret dist/default/production\Practica8_15_0.X.production.o
+__Lirdata 0 0 CODE 0 irdata dist/default/production\Practica8_15_0.X.production.o
+__end_of_opt_Full_stepper 5C04 0 CODE 0 text21 dist/default/production\Practica8_15_0.X.production.o
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__CFG_ICPRT$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+?_vfpfcnvrt 40 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__Lspace_0 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__Lspace_1 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__Lspace_2 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__pbssCOMRAM 5D 0 COMRAM 1 bssCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\Practica8_15_0.X.production.o
+opt_Half_stepper@steps B 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__size_of_opt_Full_stepper 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_palabra1 A3 0 BANK0 1 bssBANK0 dist/default/production\Practica8_15_0.X.production.o
+_palabra2 92 0 BANK0 1 bssBANK0 dist/default/production\Practica8_15_0.X.production.o
+___aodiv@divisor 9 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+___aodiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+end_of_initialization 5496 0 CODE 0 cinit dist/default/production\Practica8_15_0.X.production.o
+__size_of_Half_stepper 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\Practica8_15_0.X.production.o
+__Hintentry 0 0 ABS 0 intentry dist/default/production\Practica8_15_0.X.production.o
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_Half_stepper_izq 615E 0 CODE 0 text19 dist/default/production\Practica8_15_0.X.production.o
+fputc@c 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+fputs@c E 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+fputs@i F 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+fputs@s A 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__CFG_LPT1OSC$ON 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+?___aodiv 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+?___aomod 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+_opt_Half_stepper 5C04 0 CODE 0 text18 dist/default/production\Practica8_15_0.X.production.o
+_palabra B4 0 BANK0 1 bssBANK0 dist/default/production\Practica8_15_0.X.production.o
+vfprintf@fmt 53 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__Hreset_vec 0 0 CODE 0 reset_vec dist/default/production\Practica8_15_0.X.production.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\Practica8_15_0.X.production.o
+__Lramtop 800 0 RAM 0 ramtop dist/default/production\Practica8_15_0.X.production.o
+__size_of_strlen 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\Practica8_15_0.X.production.o
+__pcinit 5486 0 CODE 0 cinit dist/default/production\Practica8_15_0.X.production.o
+vfpfcnvrt@ap 44 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+vfpfcnvrt@fp 40 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+vfpfcnvrt@ll 48 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__ptext0 6BB6 0 CODE 0 text0 dist/default/production\Practica8_15_0.X.production.o
+__ptext1 6610 0 CODE 0 text1 dist/default/production\Practica8_15_0.X.production.o
+__ptext2 559E 0 CODE 0 text2 dist/default/production\Practica8_15_0.X.production.o
+__ptext3 5646 0 CODE 0 text3 dist/default/production\Practica8_15_0.X.production.o
+__ptext4 678C 0 CODE 0 text4 dist/default/production\Practica8_15_0.X.production.o
+__ptext5 6974 0 CODE 0 text5 dist/default/production\Practica8_15_0.X.production.o
+__ptext6 54E6 0 CODE 0 text6 dist/default/production\Practica8_15_0.X.production.o
+__ptext7 63A4 0 CODE 0 text7 dist/default/production\Practica8_15_0.X.production.o
+__ptext8 64C8 0 CODE 0 text8 dist/default/production\Practica8_15_0.X.production.o
+__ptext9 5550 0 CODE 0 text9 dist/default/production\Practica8_15_0.X.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\Practica8_15_0.X.production.o
+vfprintf@ap 55 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+vfprintf@fp 51 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+vfprintf@cfmt 57 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__Ltext10 0 0 ABS 0 text10 dist/default/production\Practica8_15_0.X.production.o
+__Ltext11 0 0 ABS 0 text11 dist/default/production\Practica8_15_0.X.production.o
+__Ltext12 0 0 ABS 0 text12 dist/default/production\Practica8_15_0.X.production.o
+__Ltext13 0 0 ABS 0 text13 dist/default/production\Practica8_15_0.X.production.o
+__Ltext14 0 0 ABS 0 text14 dist/default/production\Practica8_15_0.X.production.o
+__Ltext15 0 0 ABS 0 text15 dist/default/production\Practica8_15_0.X.production.o
+__Ltext16 0 0 ABS 0 text16 dist/default/production\Practica8_15_0.X.production.o
+__Ltext17 0 0 ABS 0 text17 dist/default/production\Practica8_15_0.X.production.o
+__Ltext18 0 0 ABS 0 text18 dist/default/production\Practica8_15_0.X.production.o
+__Ltext19 0 0 ABS 0 text19 dist/default/production\Practica8_15_0.X.production.o
+__Ltext20 0 0 ABS 0 text20 dist/default/production\Practica8_15_0.X.production.o
+__Ltext21 0 0 ABS 0 text21 dist/default/production\Practica8_15_0.X.production.o
+__Ltext22 0 0 ABS 0 text22 dist/default/production\Practica8_15_0.X.production.o
+__Ltext23 0 0 ABS 0 text23 dist/default/production\Practica8_15_0.X.production.o
+__Ltext24 0 0 ABS 0 text24 dist/default/production\Practica8_15_0.X.production.o
+__Ltext25 0 0 ABS 0 text25 dist/default/production\Practica8_15_0.X.production.o
+__Ltext26 0 0 ABS 0 text26 dist/default/production\Practica8_15_0.X.production.o
+__Ltext27 0 0 ABS 0 text27 dist/default/production\Practica8_15_0.X.production.o
+__Ltext28 0 0 ABS 0 text28 dist/default/production\Practica8_15_0.X.production.o
+__Ltext29 0 0 ABS 0 text29 dist/default/production\Practica8_15_0.X.production.o
+__Ltext30 0 0 ABS 0 text30 dist/default/production\Practica8_15_0.X.production.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\Emmanuel\AppData\Local\Temp\sa8c.o
+_sprintf 559E 0 CODE 0 text2 dist/default/production\Practica8_15_0.X.production.o
+Lcd_Out2@data A 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__end_of_Half_stepper 615E 0 CODE 0 text20 dist/default/production\Practica8_15_0.X.production.o
+Lcd_Cmd@data 3 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+_vfprintf 5646 0 CODE 0 text3 dist/default/production\Practica8_15_0.X.production.o
+__Lpowerup 0 0 CODE 0 powerup dist/default/production\Practica8_15_0.X.production.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Practica8_15_0.X.production.o
+sprintf@ap CF 0 BANK0 1 cstackBANK0 dist/default/production\Practica8_15_0.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\Practica8_15_0.X.production.o
+__end_of_vfprintf 569C 0 CODE 0 text3 dist/default/production\Practica8_15_0.X.production.o
+__CFG_FOSC$HS 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+___param_bank 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__CFG_WDT$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Practica8_15_0.X.production.o
+__end_of__initialization 5496 0 CODE 0 cinit dist/default/production\Practica8_15_0.X.production.o
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__CFG_WRT2$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__CFG_WRT3$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\Practica8_15_0.X.production.o
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+Lcd_Out@x 4 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+Lcd_Out@y 9 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\Practica8_15_0.X.production.o
+___lmul@product 9 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+ctoa@fp 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+___lmul@multiplicand 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__pmediumconst 7E86 0 MEDIUMCONST 0 mediumconst dist/default/production\Practica8_15_0.X.production.o
+Lcd_Init@data 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__size_of_Lcd_Init 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__size_of_Lcd_Out2 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+vfpfcnvrt@c 50 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+sprintf@f D1 0 BANK0 1 cstackBANK0 dist/default/production\Practica8_15_0.X.production.o
+sprintf@s C5 0 BANK0 1 cstackBANK0 dist/default/production\Practica8_15_0.X.production.o
+__CFG_PWRT$ON 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__end_of_ctoa 559E 0 CODE 0 text9 dist/default/production\Practica8_15_0.X.production.o
+__end_of_dtoa 6BB6 0 CODE 0 text5 dist/default/production\Practica8_15_0.X.production.o
+__end_of_main 7E86 0 CODE 0 text0 dist/default/production\Practica8_15_0.X.production.o
+__end_of_Half_stepper_izq 6280 0 CODE 0 text19 dist/default/production\Practica8_15_0.X.production.o
+opt_Half_stepper@direttion F 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__end_of_fputc 5B00 0 CODE 0 text13 dist/default/production\Practica8_15_0.X.production.o
+__end_of_fputs 5550 0 CODE 0 text12 dist/default/production\Practica8_15_0.X.production.o
+?_sprintf C5 0 BANK0 1 cstackBANK0 dist/default/production\Practica8_15_0.X.production.o
+__end_of_initM 54BC 0 CODE 0 text25 dist/default/production\Practica8_15_0.X.production.o
+_PORTA F80 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_PORTB F81 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_PORTD F83 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+opt_Wave_stepper@direttion F 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+_TRISA F92 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_TRISB F93 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__end_of_putch 5486 0 CODE 0 text14 dist/default/production\Practica8_15_0.X.production.o
+__CFG_CP0$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__end_of_opt_Half_stepper 5D08 0 CODE 0 text18 dist/default/production\Practica8_15_0.X.production.o
+__CFG_CP1$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__HRAM 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__Hbss 0 0 RAM 1 bss dist/default/production\Practica8_15_0.X.production.o
+__Hram 0 0 ABS 0 ram dist/default/production\Practica8_15_0.X.production.o
+__Hsfr 0 0 ABS 0 sfr dist/default/production\Practica8_15_0.X.production.o
+__LRAM 1 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__Lbss 0 0 RAM 1 bss dist/default/production\Practica8_15_0.X.production.o
+__Lram 0 0 ABS 0 ram dist/default/production\Practica8_15_0.X.production.o
+__Lsfr 0 0 ABS 0 sfr dist/default/production\Practica8_15_0.X.production.o
+__CFG_CP2$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__CFG_CP3$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+main@caracter D9 0 BANK0 1 cstackBANK0 dist/default/production\Practica8_15_0.X.production.o
+_flags 5D 0 COMRAM 1 bssCOMRAM dist/default/production\Practica8_15_0.X.production.o
+_fputc 5A60 0 CODE 0 text13 dist/default/production\Practica8_15_0.X.production.o
+_fputs 5518 0 CODE 0 text12 dist/default/production\Practica8_15_0.X.production.o
+_initM 54A0 0 CODE 0 text25 dist/default/production\Practica8_15_0.X.production.o
+__CFG_CPB$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_putch 5484 0 CODE 0 text14 dist/default/production\Practica8_15_0.X.production.o
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_valor 64 0 BANK0 1 bssBANK0 dist/default/production\Practica8_15_0.X.production.o
+_width 6E 0 BANK0 1 bssBANK0 dist/default/production\Practica8_15_0.X.production.o
+main@Dir_sel DC 0 BANK0 1 cstackBANK0 dist/default/production\Practica8_15_0.X.production.o
+__size_of_Half_stepper_izq 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_Lcd_Cmd 5F1E 0 CODE 0 text30 dist/default/production\Practica8_15_0.X.production.o
+_Lcd_Out 570C 0 CODE 0 text22 dist/default/production\Practica8_15_0.X.production.o
+__size_of_abs 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__size_of_pad 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+__size_of_opt_Half_stepper 0 0 ABS 0 - dist/default/production\Practica8_15_0.X.production.o
+_contador 68 0 BANK0 1 bssBANK0 dist/default/production\Practica8_15_0.X.production.o
+__initialization 5486 0 CODE 0 cinit dist/default/production\Practica8_15_0.X.production.o
+__pbssBANK0 60 0 BANK0 1 bssBANK0 dist/default/production\Practica8_15_0.X.production.o
+ctoa@c 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+ctoa@w 1F 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\Practica8_15_0.X.production.o
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\Practica8_15_0.X.production.o
+dtoa@d 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+dtoa@i 3E 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+dtoa@n 36 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+dtoa@p 30 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+dtoa@s 34 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+dtoa@w 32 0 COMRAM 1 cstackCOMRAM dist/default/production\Practica8_15_0.X.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\Practica8_15_0.X.production.o
+_teclado 6610 0 CODE 0 text1 dist/default/production\Practica8_15_0.X.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Practica8_15_0.X.production.o
+__Hintcode 0 0 CODE 0 intcode dist/default/production\Practica8_15_0.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 5486 5486 1A 1
+idloc 0 200000 200000 8 1
+text0 0 6BB6 6BB6 12D0 1
+text1 0 6610 6610 17C 1
+text2 0 559E 559E 52 1
+text3 0 5646 5646 56 1
+text4 0 678C 678C 1E8 1
+text5 0 6974 6974 242 1
+text6 0 54E6 54E6 32 1
+text7 0 63A4 63A4 124 1
+text8 0 64C8 64C8 148 1
+text9 0 5550 5550 4E 1
+text10 0 59CA 59CA 96 1
+text11 0 54BC 54BC 2A 1
+text12 0 5518 5518 38 1
+text13 0 5A60 5A60 A0 1
+text14 0 5484 5484 2 1
+text15 0 5D08 5D08 104 1
+text16 0 5938 5938 92 1
+text17 0 58A6 58A6 92 1
+text18 0 5C04 5C04 104 1
+text19 0 615E 615E 122 1
+text20 0 603C 603C 122 1
+text21 0 5B00 5B00 104 1
+text22 0 570C 570C 76 1
+text23 0 5814 5814 92 1
+text24 0 5782 5782 92 1
+text25 0 54A0 54A0 1C 1
+text26 0 55F0 55F0 56 1
+text27 0 569C 569C 70 1
+text28 0 6280 6280 124 1
+text29 0 5E0C 5E0C 112 1
+text30 0 5F1E 5F1E 11E 1
+cstackCOMRAM 1 1 1 5E 1
+reset_vec 0 0 0 4 1
+bssBANK0 1 60 60 81 1
+mediumconst 0 7E86 7E86 17A 1
+config 0 300000 300000 E 1

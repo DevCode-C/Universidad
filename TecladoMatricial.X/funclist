@@ -1,0 +1,5 @@
+_main: CODE, 32350 0 110
+__initialization: CODE, 32308 0 32
+_teclado_getc: CODE, 32460 0 308
+_teclado_init: CODE, 32280 0 12
+Total: 462

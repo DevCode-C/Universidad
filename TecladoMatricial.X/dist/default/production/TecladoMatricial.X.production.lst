@@ -1,0 +1,797 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.32 build 58300 
+                                                                                               Mon Nov 05 20:33:30 2018
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 58300
+     1                           	processor	18F4550
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	idataCOMRAM,global,class=CODE,delta=1
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	dataCOMRAM,global,class=COMRAM,space=1,delta=1
+     8                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1
+     9                           	psect	text0,global,reloc=2,class=CODE,delta=1
+    10                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    11                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    12                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1
+    13                           	psect	rparam,global,class=COMRAM,space=1,delta=1
+    14  0000                     
+    15                           	psect	idataCOMRAM
+    16  007E24                     __pidataCOMRAM:
+    17                           	opt stack 0
+    18                           
+    19                           ;initializer for teclado_getc@F5264
+    20  007E24  31                 	db	49
+    21  007E25  32                 	db	50
+    22  007E26  33                 	db	51
+    23  007E27  41                 	db	65
+    24  007E28  34                 	db	52
+    25  007E29  35                 	db	53
+    26  007E2A  36                 	db	54
+    27  007E2B  42                 	db	66
+    28  007E2C  37                 	db	55
+    29  007E2D  38                 	db	56
+    30  007E2E  39                 	db	57
+    31  007E2F  43                 	db	67
+    32  007E30  2A                 	db	42
+    33  007E31  30                 	db	48
+    34  007E32  23                 	db	35
+    35  007E33  44                 	db	68
+    36  0000                     _INTCON2bits	set	4081
+    37  0000                     _LATB	set	3978
+    38  0000                     _PORTB	set	3969
+    39  0000                     _TRISB	set	3987
+    40  0000                     _TRISD	set	3989
+    41  0000                     _TRISDbits	set	3989
+    42                           
+    43                           ; #config settings
+    44  0000                     
+    45                           	psect	cinit
+    46  007E34                     __pcinit:
+    47                           	opt stack 0
+    48  007E34                     start_initialization:
+    49                           	opt stack 0
+    50  007E34                     __initialization:
+    51                           	opt stack 0
+    52                           
+    53                           ; Initialize objects allocated to COMRAM (16 bytes)
+    54                           ; load TBLPTR registers with __pidataCOMRAM
+    55  007E34  0E24               	movlw	low __pidataCOMRAM
+    56  007E36  6EF6               	movwf	tblptrl,c
+    57  007E38  0E7E               	movlw	high __pidataCOMRAM
+    58  007E3A  6EF7               	movwf	tblptrh,c
+    59  007E3C  0E00               	movlw	low (__pidataCOMRAM shr (0+16))
+    60  007E3E  6EF8               	movwf	tblptru,c
+    61  007E40  EE00  F015         	lfsr	0,__pdataCOMRAM
+    62  007E44  EE10 F010          	lfsr	1,16
+    63  007E48                     copy_data0:
+    64  007E48  0009               	tblrd		*+
+    65  007E4A  CFF5 FFEE          	movff	tablat,postinc0
+    66  007E4E  50E5               	movf	postdec1,w,c
+    67  007E50  50E1               	movf	fsr1l,w,c
+    68  007E52  E1FA               	bnz	copy_data0
+    69  007E54                     end_of_initialization:
+    70                           	opt stack 0
+    71  007E54                     __end_of__initialization:
+    72                           	opt stack 0
+    73  007E54  0E00               	movlw	low (__Lmediumconst shr (0+16))
+    74  007E56  6EF8               	movwf	tblptru,c
+    75  007E58  0100               	movlb	0
+    76  007E5A  EF2F  F03F         	goto	_main	;jump to C main() function
+    77                           tblptru	equ	0xFF8
+    78                           tblptrh	equ	0xFF7
+    79                           tblptrl	equ	0xFF6
+    80                           tablat	equ	0xFF5
+    81                           postinc0	equ	0xFEE
+    82                           postdec1	equ	0xFE5
+    83                           fsr1l	equ	0xFE1
+    84                           
+    85                           	psect	dataCOMRAM
+    86  000015                     __pdataCOMRAM:
+    87                           	opt stack 0
+    88  000015                     teclado_getc@F5264:
+    89                           	opt stack 0
+    90  000015                     	ds	16
+    91                           tblptru	equ	0xFF8
+    92                           tblptrh	equ	0xFF7
+    93                           tblptrl	equ	0xFF6
+    94                           tablat	equ	0xFF5
+    95                           postinc0	equ	0xFEE
+    96                           postdec1	equ	0xFE5
+    97                           fsr1l	equ	0xFE1
+    98                           
+    99                           	psect	cstackCOMRAM
+   100  000001                     __pcstackCOMRAM:
+   101                           	opt stack 0
+   102  000001                     teclado_getc@letras:
+   103                           	opt stack 0
+   104                           
+   105                           ; 16 bytes @ 0x0
+   106  000001                     	ds	16
+   107  000011                     teclado_getc@valor:
+   108                           	opt stack 0
+   109                           
+   110                           ; 1 bytes @ 0x10
+   111  000011                     	ds	1
+   112  000012                     teclado_getc@i:
+   113                           	opt stack 0
+   114                           
+   115                           ; 2 bytes @ 0x11
+   116  000012                     	ds	2
+   117  000014                     main@tecla:
+   118                           	opt stack 0
+   119                           
+   120                           ; 1 bytes @ 0x13
+   121  000014                     	ds	1
+   122                           tblptru	equ	0xFF8
+   123                           tblptrh	equ	0xFF7
+   124                           tblptrl	equ	0xFF6
+   125                           tablat	equ	0xFF5
+   126                           postinc0	equ	0xFEE
+   127                           postdec1	equ	0xFE5
+   128                           fsr1l	equ	0xFE1
+   129                           
+   130 ;;
+   131 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   132 ;;
+   133 ;; *************** function _main *****************
+   134 ;; Defined at:
+   135 ;;		line 15 in file "TecladoMatricial.c"
+   136 ;; Parameters:    Size  Location     Type
+   137 ;;		None
+   138 ;; Auto vars:     Size  Location     Type
+   139 ;;  tecla           1   19[COMRAM] unsigned char 
+   140 ;; Return value:  Size  Location     Type
+   141 ;;		None               void
+   142 ;; Registers used:
+   143 ;;		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, cstack
+   144 ;; Tracked objects:
+   145 ;;		On entry : 0/0
+   146 ;;		On exit  : 0/0
+   147 ;;		Unchanged: 0/0
+   148 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   149 ;;      Params:         0       0       0       0       0       0       0       0       0
+   150 ;;      Locals:         1       0       0       0       0       0       0       0       0
+   151 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   152 ;;      Totals:         1       0       0       0       0       0       0       0       0
+   153 ;;Total ram usage:        1 bytes
+   154 ;; Hardware stack levels required when called:    1
+   155 ;; This function calls:
+   156 ;;		_teclado_getc
+   157 ;;		_teclado_init
+   158 ;; This function is called by:
+   159 ;;		Startup code after reset
+   160 ;; This function uses a non-reentrant model
+   161 ;;
+   162                           
+   163                           	psect	text0
+   164  007E5E                     __ptext0:
+   165                           	opt stack 0
+   166  007E5E                     _main:
+   167                           	opt stack 30
+   168                           
+   169                           ;TecladoMatricial.c: 16: char tecla=0;
+   170                           
+   171                           ;incstack = 0
+   172  007E5E  0E00               	movlw	0
+   173  007E60  6E14               	movwf	main@tecla,c
+   174                           
+   175                           ;TecladoMatricial.c: 17: teclado_init();
+   176  007E62  EC0C  F03F         	call	_teclado_init	;wreg free
+   177                           
+   178                           ;TecladoMatricial.c: 19: TRISB=0xF0;
+   179  007E66  0EF0               	movlw	240
+   180  007E68  6E93               	movwf	3987,c	;volatile
+   181                           
+   182                           ;TecladoMatricial.c: 21: char tecla=0;
+   183  007E6A  0E00               	movlw	0
+   184  007E6C  6E14               	movwf	main@tecla,c
+   185                           
+   186                           ;TecladoMatricial.c: 22: tecla= teclado_getc();
+   187  007E6E  EC66  F03F         	call	_teclado_getc	;wreg free
+   188  007E72  6E14               	movwf	main@tecla,c
+   189  007E74                     l736:
+   190                           
+   191                           ;TecladoMatricial.c: 24: if(tecla!=0){
+   192  007E74  5014               	movf	main@tecla,w,c
+   193  007E76  A4D8               	btfss	status,2,c
+   194  007E78  D009               	goto	l742
+   195  007E7A  D7FC               	goto	l736
+   196  007E7C                     l16:
+   197  007E7C  9095               	bcf	3989,0,c	;volatile
+   198  007E7E  D7FA               	goto	l736
+   199  007E80                     l18:
+   200  007E80  9295               	bcf	3989,1,c	;volatile
+   201  007E82  D7F8               	goto	l736
+   202  007E84                     l26:
+   203  007E84  8295               	bsf	3989,1,c	;volatile
+   204  007E86  D7F6               	goto	l736
+   205  007E88                     l27:
+   206  007E88  6895               	setf	3989,c	;volatile
+   207  007E8A  D7F4               	goto	l736
+   208  007E8C                     l742:
+   209  007E8C  5014               	movf	main@tecla,w,c
+   210                           
+   211                           ; Switch size 1, requested type "space"
+   212                           ; Number of cases is 10, Range of values is 42 to 57
+   213                           ; switch strategies available:
+   214                           ; Name         Instructions Cycles
+   215                           ; simple_byte           31    16 (average)
+   216                           ;	Chosen strategy is simple_byte
+   217  007E8E  0A2A               	xorlw	42	; case 42
+   218  007E90  B4D8               	btfsc	status,2,c
+   219  007E92  D7F8               	goto	l26
+   220  007E94  0A1B               	xorlw	27	; case 49
+   221  007E96  B4D8               	btfsc	status,2,c
+   222  007E98  D7F1               	goto	l16
+   223  007E9A  0A03               	xorlw	3	; case 50
+   224  007E9C  B4D8               	btfsc	status,2,c
+   225  007E9E  D7F0               	goto	l18
+   226  007EA0  0A01               	xorlw	1	; case 51
+   227  007EA2  B4D8               	btfsc	status,2,c
+   228  007EA4  D7EF               	goto	l26
+   229  007EA6  0A07               	xorlw	7	; case 52
+   230  007EA8  B4D8               	btfsc	status,2,c
+   231  007EAA  D7EC               	goto	l26
+   232  007EAC  0A01               	xorlw	1	; case 53
+   233  007EAE  B4D8               	btfsc	status,2,c
+   234  007EB0  D7E9               	goto	l26
+   235  007EB2  0A03               	xorlw	3	; case 54
+   236  007EB4  B4D8               	btfsc	status,2,c
+   237  007EB6  D7E6               	goto	l26
+   238  007EB8  0A01               	xorlw	1	; case 55
+   239  007EBA  B4D8               	btfsc	status,2,c
+   240  007EBC  D7E3               	goto	l26
+   241  007EBE  0A0F               	xorlw	15	; case 56
+   242  007EC0  B4D8               	btfsc	status,2,c
+   243  007EC2  D7E0               	goto	l26
+   244  007EC4  0A01               	xorlw	1	; case 57
+   245  007EC6  B4D8               	btfsc	status,2,c
+   246  007EC8  D7DD               	goto	l26
+   247  007ECA  D7DE               	goto	l27
+   248  007ECC                     __end_of_main:
+   249                           	opt stack 0
+   250                           tblptru	equ	0xFF8
+   251                           tblptrh	equ	0xFF7
+   252                           tblptrl	equ	0xFF6
+   253                           tablat	equ	0xFF5
+   254                           postinc0	equ	0xFEE
+   255                           postdec1	equ	0xFE5
+   256                           fsr1l	equ	0xFE1
+   257                           status	equ	0xFD8
+   258                           
+   259 ;; *************** function _teclado_init *****************
+   260 ;; Defined at:
+   261 ;;		line 12 in file "teclado.c"
+   262 ;; Parameters:    Size  Location     Type
+   263 ;;		None
+   264 ;; Auto vars:     Size  Location     Type
+   265 ;;		None
+   266 ;; Return value:  Size  Location     Type
+   267 ;;		None               void
+   268 ;; Registers used:
+   269 ;;		wreg, status,2, status,0
+   270 ;; Tracked objects:
+   271 ;;		On entry : 0/0
+   272 ;;		On exit  : 0/0
+   273 ;;		Unchanged: 0/0
+   274 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   275 ;;      Params:         0       0       0       0       0       0       0       0       0
+   276 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   277 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   278 ;;      Totals:         0       0       0       0       0       0       0       0       0
+   279 ;;Total ram usage:        0 bytes
+   280 ;; Hardware stack levels used:    1
+   281 ;; This function calls:
+   282 ;;		Nothing
+   283 ;; This function is called by:
+   284 ;;		_main
+   285 ;; This function uses a non-reentrant model
+   286 ;;
+   287                           
+   288                           	psect	text1
+   289  007E18                     __ptext1:
+   290                           	opt stack 0
+   291  007E18                     _teclado_init:
+   292                           	opt stack 30
+   293                           
+   294                           ;teclado.c: 14: TRISB &= ~(1<<0) & ~(1<<1) & ~(1<<2) & ~(1<<3);
+   295                           
+   296                           ;incstack = 0
+   297  007E18  0EF0               	movlw	240
+   298  007E1A  1693               	andwf	3987,f,c	;volatile
+   299                           
+   300                           ;teclado.c: 15: TRISB |= (1<<4) | (1<<5) | (1<<6) | (1<<7);
+   301  007E1C  0EF0               	movlw	240
+   302  007E1E  1293               	iorwf	3987,f,c	;volatile
+   303                           
+   304                           ;teclado.c: 16: INTCON2bits.RBPU = 0;
+   305  007E20  9EF1               	bcf	intcon2,7,c	;volatile
+   306  007E22  0012               	return	
+   307  007E24                     __end_of_teclado_init:
+   308                           	opt stack 0
+   309                           tblptru	equ	0xFF8
+   310                           tblptrh	equ	0xFF7
+   311                           tblptrl	equ	0xFF6
+   312                           tablat	equ	0xFF5
+   313                           intcon2	equ	0xFF1
+   314                           postinc0	equ	0xFEE
+   315                           postdec1	equ	0xFE5
+   316                           fsr1l	equ	0xFE1
+   317                           status	equ	0xFD8
+   318                           
+   319 ;; *************** function _teclado_getc *****************
+   320 ;; Defined at:
+   321 ;;		line 19 in file "teclado.c"
+   322 ;; Parameters:    Size  Location     Type
+   323 ;;		None
+   324 ;; Auto vars:     Size  Location     Type
+   325 ;;  letras         16    0[COMRAM] unsigned char [4][4]
+   326 ;;  i               2   17[COMRAM] int 
+   327 ;;  valor           1   16[COMRAM] unsigned char 
+   328 ;; Return value:  Size  Location     Type
+   329 ;;                  1    wreg      unsigned char 
+   330 ;; Registers used:
+   331 ;;		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0
+   332 ;; Tracked objects:
+   333 ;;		On entry : 0/0
+   334 ;;		On exit  : 0/0
+   335 ;;		Unchanged: 0/0
+   336 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   337 ;;      Params:         0       0       0       0       0       0       0       0       0
+   338 ;;      Locals:        19       0       0       0       0       0       0       0       0
+   339 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   340 ;;      Totals:        19       0       0       0       0       0       0       0       0
+   341 ;;Total ram usage:       19 bytes
+   342 ;; Hardware stack levels used:    1
+   343 ;; This function calls:
+   344 ;;		Nothing
+   345 ;; This function is called by:
+   346 ;;		_main
+   347 ;; This function uses a non-reentrant model
+   348 ;;
+   349                           
+   350                           	psect	text2
+   351  007ECC                     __ptext2:
+   352                           	opt stack 0
+   353  007ECC                     _teclado_getc:
+   354                           	opt stack 30
+   355                           
+   356                           ;teclado.c: 21: char letras[4][4]={ {'1','2','3','A'},
+   357                           ;teclado.c: 22: {'4','5','6','B'},
+   358                           ;teclado.c: 23: {'7','8','9','C'},
+   359                           ;teclado.c: 24: {'*','0','#','D'}};
+   360                           
+   361                           ;incstack = 0
+   362  007ECC  EE20  F015         	lfsr	2,teclado_getc@F5264
+   363  007ED0  EE10  F001         	lfsr	1,teclado_getc@letras
+   364  007ED4  0E10               	movlw	16
+   365  007ED6                     u11:
+   366  007ED6  CFDE FFE6          	movff	postinc2,postinc1
+   367  007EDA  2EE8               	decfsz	wreg,f,c
+   368  007EDC  D7FC               	goto	u11
+   369                           
+   370                           ;teclado.c: 25: int i=0;
+   371  007EDE  0E00               	movlw	0
+   372  007EE0  6E13               	movwf	teclado_getc@i+1,c
+   373  007EE2  0E00               	movlw	0
+   374  007EE4  6E12               	movwf	teclado_getc@i,c
+   375                           
+   376                           ;teclado.c: 26: char valor=0;
+   377  007EE6  0E00               	movlw	0
+   378  007EE8  6E11               	movwf	teclado_getc@valor,c
+   379                           
+   380                           ;teclado.c: 28: for(i=0;i<4;i++){
+   381  007EEA  0E00               	movlw	0
+   382  007EEC  6E13               	movwf	teclado_getc@i+1,c
+   383  007EEE  0E00               	movlw	0
+   384  007EF0  6E12               	movwf	teclado_getc@i,c
+   385  007EF2  5013               	movf	teclado_getc@i+1,w,c
+   386  007EF4  0A80               	xorlw	128
+   387  007EF6  0F80               	addlw	-128
+   388  007EF8  0E04               	movlw	4
+   389  007EFA  B4D8               	btfsc	status,2,c
+   390  007EFC  5C12               	subwf	teclado_getc@i,w,c
+   391  007EFE  B0D8               	btfsc	status,0,c
+   392  007F00  D07D               	goto	l722
+   393                           
+   394                           ;teclado.c: 30: if(i==0){
+   395  007F02  5013               	movf	teclado_getc@i+1,w,c
+   396  007F04  1012               	iorwf	teclado_getc@i,w,c
+   397  007F06  A4D8               	btfss	status,2,c
+   398  007F08  D01A               	goto	l700
+   399                           
+   400                           ;teclado.c: 32: LATB = (1<<7)|(1<<6)|(1<<5)|(1<<4)|(1<<3)|(1<<2)|(1<<1)|(0<<0);
+   401  007F0A  0EFE               	movlw	254
+   402  007F0C  6E8A               	movwf	3978,c	;volatile
+   403                           
+   404                           ;teclado.c: 33: _delay((unsigned long)((100)*(20000000UL/4000000.0)));
+   405  007F0E  0EA6               	movlw	166
+   406  007F10                     u257:
+   407  007F10  2EE8               	decfsz	wreg,f,c
+   408  007F12  D7FE               	goto	u257
+   409  007F14  D000               	nop2		;nop
+   410                           
+   411                           ;teclado.c: 34: while (!(PORTB & (1<<4))){valor=letras[0][0];}
+   412  007F16  D002               	goto	l51
+   413  007F18                     l52:
+   414  007F18  C001  F011         	movff	teclado_getc@letras,teclado_getc@valor
+   415  007F1C                     l51:
+   416  007F1C  B881               	btfsc	3969,4,c	;volatile
+   417  007F1E  D003               	goto	l54
+   418  007F20  D7FB               	goto	l52
+   419  007F22                     l55:
+   420  007F22  C002  F011         	movff	teclado_getc@letras+1,teclado_getc@valor
+   421  007F26                     l54:
+   422  007F26  BA81               	btfsc	3969,5,c	;volatile
+   423  007F28  D003               	goto	l57
+   424  007F2A  D7FB               	goto	l55
+   425  007F2C                     l58:
+   426  007F2C  C003  F011         	movff	teclado_getc@letras+2,teclado_getc@valor
+   427  007F30                     l57:
+   428  007F30  BC81               	btfsc	3969,6,c	;volatile
+   429  007F32  D003               	goto	l60
+   430  007F34  D7FB               	goto	l58
+   431  007F36                     l61:
+   432  007F36  C004  F011         	movff	teclado_getc@letras+3,teclado_getc@valor
+   433  007F3A                     l60:
+   434  007F3A  AE81               	btfss	3969,7,c	;volatile
+   435  007F3C  D7FC               	goto	l61
+   436  007F3E                     l700:
+   437                           
+   438                           ;teclado.c: 38: }
+   439                           ;teclado.c: 40: if(i==1){
+   440  007F3E  0412               	decf	teclado_getc@i,w,c
+   441  007F40  1013               	iorwf	teclado_getc@i+1,w,c
+   442  007F42  A4D8               	btfss	status,2,c
+   443  007F44  D01A               	goto	l706
+   444                           
+   445                           ;teclado.c: 41: LATB = (1<<7)|(1<<6)|(1<<5)|(1<<4)|(1<<3)|(1<<2)|(0<<1)|(1<<0);
+   446  007F46  0EFD               	movlw	253
+   447  007F48  6E8A               	movwf	3978,c	;volatile
+   448                           
+   449                           ;teclado.c: 42: _delay((unsigned long)((100)*(20000000UL/4000000.0)));
+   450  007F4A  0EA6               	movlw	166
+   451  007F4C                     u267:
+   452  007F4C  2EE8               	decfsz	wreg,f,c
+   453  007F4E  D7FE               	goto	u267
+   454  007F50  D000               	nop2		;nop
+   455                           
+   456                           ;teclado.c: 43: while (!(PORTB & (1<<4))){valor=letras[1][0];}
+   457  007F52  D002               	goto	l64
+   458  007F54                     l65:
+   459  007F54  C005  F011         	movff	teclado_getc@letras+4,teclado_getc@valor
+   460  007F58                     l64:
+   461  007F58  B881               	btfsc	3969,4,c	;volatile
+   462  007F5A  D003               	goto	l67
+   463  007F5C  D7FB               	goto	l65
+   464  007F5E                     l68:
+   465  007F5E  C006  F011         	movff	teclado_getc@letras+5,teclado_getc@valor
+   466  007F62                     l67:
+   467  007F62  BA81               	btfsc	3969,5,c	;volatile
+   468  007F64  D003               	goto	l70
+   469  007F66  D7FB               	goto	l68
+   470  007F68                     l71:
+   471  007F68  C007  F011         	movff	teclado_getc@letras+6,teclado_getc@valor
+   472  007F6C                     l70:
+   473  007F6C  BC81               	btfsc	3969,6,c	;volatile
+   474  007F6E  D003               	goto	l73
+   475  007F70  D7FB               	goto	l71
+   476  007F72                     l74:
+   477  007F72  C008  F011         	movff	teclado_getc@letras+7,teclado_getc@valor
+   478  007F76                     l73:
+   479  007F76  AE81               	btfss	3969,7,c	;volatile
+   480  007F78  D7FC               	goto	l74
+   481  007F7A                     l706:
+   482                           
+   483                           ;teclado.c: 47: }
+   484                           ;teclado.c: 49: if(i==2){
+   485  007F7A  5012               	movf	teclado_getc@i,w,c
+   486  007F7C  0A02               	xorlw	2
+   487  007F7E  1013               	iorwf	teclado_getc@i+1,w,c
+   488  007F80  A4D8               	btfss	status,2,c
+   489  007F82  D01A               	goto	l712
+   490                           
+   491                           ;teclado.c: 50: LATB = (1<<7)|(1<<6)|(1<<5)|(1<<4)|(1<<3)|(0<<2)|(1<<1)|(1<<0);
+   492  007F84  0EFB               	movlw	251
+   493  007F86  6E8A               	movwf	3978,c	;volatile
+   494                           
+   495                           ;teclado.c: 51: _delay((unsigned long)((100)*(20000000UL/4000000.0)));
+   496  007F88  0EA6               	movlw	166
+   497  007F8A                     u277:
+   498  007F8A  2EE8               	decfsz	wreg,f,c
+   499  007F8C  D7FE               	goto	u277
+   500  007F8E  D000               	nop2		;nop
+   501                           
+   502                           ;teclado.c: 52: while (!(PORTB & (1<<4))){valor=letras[2][0];}
+   503  007F90  D002               	goto	l77
+   504  007F92                     l78:
+   505  007F92  C009  F011         	movff	teclado_getc@letras+8,teclado_getc@valor
+   506  007F96                     l77:
+   507  007F96  B881               	btfsc	3969,4,c	;volatile
+   508  007F98  D003               	goto	l80
+   509  007F9A  D7FB               	goto	l78
+   510  007F9C                     l81:
+   511  007F9C  C00A  F011         	movff	teclado_getc@letras+9,teclado_getc@valor
+   512  007FA0                     l80:
+   513  007FA0  BA81               	btfsc	3969,5,c	;volatile
+   514  007FA2  D003               	goto	l83
+   515  007FA4  D7FB               	goto	l81
+   516  007FA6                     l84:
+   517  007FA6  C00B  F011         	movff	teclado_getc@letras+10,teclado_getc@valor
+   518  007FAA                     l83:
+   519  007FAA  BC81               	btfsc	3969,6,c	;volatile
+   520  007FAC  D003               	goto	l86
+   521  007FAE  D7FB               	goto	l84
+   522  007FB0                     l87:
+   523  007FB0  C00C  F011         	movff	teclado_getc@letras+11,teclado_getc@valor
+   524  007FB4                     l86:
+   525  007FB4  AE81               	btfss	3969,7,c	;volatile
+   526  007FB6  D7FC               	goto	l87
+   527  007FB8                     l712:
+   528                           
+   529                           ;teclado.c: 56: }
+   530                           ;teclado.c: 58: if(i==3){
+   531  007FB8  5012               	movf	teclado_getc@i,w,c
+   532  007FBA  0A03               	xorlw	3
+   533  007FBC  1013               	iorwf	teclado_getc@i+1,w,c
+   534  007FBE  A4D8               	btfss	status,2,c
+   535  007FC0  D01A               	goto	l718
+   536                           
+   537                           ;teclado.c: 59: LATB = (1<<7)|(1<<6)|(1<<5)|(1<<4)|(0<<3)|(1<<2)|(1<<1)|(1<<0);
+   538  007FC2  0EF7               	movlw	247
+   539  007FC4  6E8A               	movwf	3978,c	;volatile
+   540                           
+   541                           ;teclado.c: 60: _delay((unsigned long)((100)*(20000000UL/4000000.0)));
+   542  007FC6  0EA6               	movlw	166
+   543  007FC8                     u287:
+   544  007FC8  2EE8               	decfsz	wreg,f,c
+   545  007FCA  D7FE               	goto	u287
+   546  007FCC  D000               	nop2		;nop
+   547                           
+   548                           ;teclado.c: 61: while (!(PORTB & (1<<4))){valor=letras[3][0];}
+   549  007FCE  D002               	goto	l90
+   550  007FD0                     l91:
+   551  007FD0  C00D  F011         	movff	teclado_getc@letras+12,teclado_getc@valor
+   552  007FD4                     l90:
+   553  007FD4  B881               	btfsc	3969,4,c	;volatile
+   554  007FD6  D003               	goto	l93
+   555  007FD8  D7FB               	goto	l91
+   556  007FDA                     l94:
+   557  007FDA  C00E  F011         	movff	teclado_getc@letras+13,teclado_getc@valor
+   558  007FDE                     l93:
+   559  007FDE  BA81               	btfsc	3969,5,c	;volatile
+   560  007FE0  D003               	goto	l96
+   561  007FE2  D7FB               	goto	l94
+   562  007FE4                     l97:
+   563  007FE4  C00F  F011         	movff	teclado_getc@letras+14,teclado_getc@valor
+   564  007FE8                     l96:
+   565  007FE8  BC81               	btfsc	3969,6,c	;volatile
+   566  007FEA  D003               	goto	l99
+   567  007FEC  D7FB               	goto	l97
+   568  007FEE                     l100:
+   569  007FEE  C010  F011         	movff	teclado_getc@letras+15,teclado_getc@valor
+   570  007FF2                     l99:
+   571  007FF2  AE81               	btfss	3969,7,c	;volatile
+   572  007FF4  D7FC               	goto	l100
+   573  007FF6                     l718:
+   574  007FF6  4A12               	infsnz	teclado_getc@i,f,c
+   575  007FF8  2A13               	incf	teclado_getc@i+1,f,c
+   576  007FFA  D77B               	goto	L1
+   577  007FFC                     l722:
+   578                           
+   579                           ;teclado.c: 65: }
+   580                           ;teclado.c: 66: }
+   581                           ;teclado.c: 68: return valor;
+   582  007FFC  5011               	movf	teclado_getc@valor,w,c
+   583  007FFE  0012               	return	
+   584  008000                     __end_of_teclado_getc:
+   585                           	opt stack 0
+   586  0000                     tblptru	equ	0xFF8
+   587                           tblptrh	equ	0xFF7
+   588                           tblptrl	equ	0xFF6
+   589                           tablat	equ	0xFF5
+   590                           intcon2	equ	0xFF1
+   591                           postinc0	equ	0xFEE
+   592                           wreg	equ	0xFE8
+   593                           postinc1	equ	0xFE6
+   594                           postdec1	equ	0xFE5
+   595                           fsr1l	equ	0xFE1
+   596                           postinc2	equ	0xFDE
+   597                           status	equ	0xFD8
+   598                           tblptru	equ	0xFF8
+   599                           tblptrh	equ	0xFF7
+   600                           tblptrl	equ	0xFF6
+   601                           tablat	equ	0xFF5
+   602                           intcon2	equ	0xFF1
+   603                           postinc0	equ	0xFEE
+   604                           wreg	equ	0xFE8
+   605                           postinc1	equ	0xFE6
+   606                           postdec1	equ	0xFE5
+   607                           fsr1l	equ	0xFE1
+   608                           postinc2	equ	0xFDE
+   609                           status	equ	0xFD8
+   610                           
+   611                           	psect	rparam
+   612  0000                     tblptru	equ	0xFF8
+   613                           tblptrh	equ	0xFF7
+   614                           tblptrl	equ	0xFF6
+   615                           tablat	equ	0xFF5
+   616                           intcon2	equ	0xFF1
+   617                           postinc0	equ	0xFEE
+   618                           wreg	equ	0xFE8
+   619                           postinc1	equ	0xFE6
+   620                           postdec1	equ	0xFE5
+   621                           fsr1l	equ	0xFE1
+   622                           postinc2	equ	0xFDE
+   623                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        16
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95     20      36
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    _main->_teclado_getc
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 1     1      0     375
+                                             19 COMRAM     1     1      0
+                       _teclado_getc
+                       _teclado_init
+ ---------------------------------------------------------------------------------
+ (1) _teclado_init                                         0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _teclado_getc                                        19    19      0     345
+                                              0 COMRAM    19    19      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _teclado_getc
+   _teclado_init
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             7FF      0       0      21        0.0%
+EEDATA             100      0       0       0        0.0%
+BITBANK7           100      0       0      18        0.0%
+BANK7              100      0       0      19        0.0%
+BITBANK6           100      0       0      16        0.0%
+BANK6              100      0       0      17        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITCOMRAM           5F      0       0       0        0.0%
+COMRAM              5F     14      24       1       37.9%
+BITSFR               0      0       0      40        0.0%
+SFR                  0      0       0      40        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0      24      20        0.0%
+DATA                 0      0      24       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.32 build 58300 
+Symbol Table                                                                                   Mon Nov 05 20:33:30 2018
+
+                     l16 7E7C                       l26 7E84                       l18 7E80  
+                     l51 7F1C                       l27 7E88                       l60 7F3A  
+                     l52 7F18                       l61 7F36                       l70 7F6C  
+                     l54 7F26                       l71 7F68                       l55 7F22  
+                     l80 7FA0                       l64 7F58                       l81 7F9C  
+                     l73 7F76                       l65 7F54                       l57 7F30  
+                     l90 7FD4                       l74 7F72                       l58 7F2C  
+                     l91 7FD0                       l83 7FAA                       l67 7F62  
+                     l84 7FA6                       l68 7F5E                       l93 7FDE  
+                     l77 7F96                       l94 7FDA                       l86 7FB4  
+                     l78 7F92                       l87 7FB0                       l96 7FE8  
+                     l97 7FE4                       l99 7FF2                       u11 7ED6  
+            __CFG_BORV$3 000000       __CFG_FOSC$XTPLL_XT 000000             __CFG_CP0$OFF 000000  
+           __CFG_CP1$OFF 000000             __CFG_CP2$OFF 000000             __CFG_CP3$OFF 000000  
+                    l100 7FEE                      l700 7F3E                      l712 7FB8  
+                    l706 7F7A                      l722 7FFC                      l718 7FF6  
+                    l742 7E8C                      l736 7E74             __CFG_CPB$OFF 000000  
+                    u257 7F10             __CFG_CPD$OFF 000000                      u267 7F4C  
+                    u277 7F8A                      u287 7FC8             __CFG_BOR$OFF 000000  
+                    wreg 000FE8             __CFG_LVP$OFF 000000             __CFG_WDT$OFF 000000  
+                   _LATB 000F8A             __CFG_PWRT$ON 000000                     _main 7E5E  
+                   fsr1l 000FE1                     start 0000            __CFG_IESO$OFF 000000  
+          __CFG_MCLRE$ON 000000            __CFG_PLLDIV$1 000000                    ?_main 0001  
+                  _PORTB 000F81            __CFG_USBDIV$1 000000                    _TRISB 000F93  
+                  _TRISD 000F95            __CFG_WRT0$OFF 000000            __CFG_WRT1$OFF 000000  
+          __CFG_WRT2$OFF 000000            __CFG_WRT3$OFF 000000           __CFG_EBTR0$OFF 000000  
+         __CFG_FCMEN$OFF 000000           __CFG_EBTR1$OFF 000000           __CFG_EBTR2$OFF 000000  
+         __CFG_EBTR3$OFF 000000            __CFG_WRTB$OFF 000000            __CFG_WRTC$OFF 000000  
+          __CFG_WRTD$OFF 000000           __CFG_EBTRB$OFF 000000                    tablat 000FF5  
+                  status 000FD8           __CFG_ICPRT$OFF 000000          __initialization 7E34  
+           __end_of_main 7ECC                   ??_main 0014            __activetblptr 000002  
+        __CFG_CCP2MX$OFF 000000           __CFG_XINST$OFF 000000             __pdataCOMRAM 0015  
+                 tblptrh 000FF7                   tblptrl 000FF6                   tblptru 000FF8  
+             __accesstop 0060  __end_of__initialization 7E54          __CFG_PBADEN$OFF 000000  
+         __pcstackCOMRAM 0001       teclado_getc@letras 0001            ?_teclado_getc 0001  
+          ?_teclado_init 0001           ??_teclado_getc 0001           ??_teclado_init 0001  
+        __CFG_VREGEN$OFF 000000                  __Hparam 0000                  __Lparam 0000  
+        __CFG_STVREN$OFF 000000                  __pcinit 7E34            teclado_getc@i 0012  
+                __ramtop 0800                  __ptext0 7E5E                  __ptext1 7E18  
+                __ptext2 7ECC     end_of_initialization 7E54            __Lmediumconst 0000  
+                postdec1 000FE5                  postinc0 000FEE                  postinc1 000FE6  
+                postinc2 000FDE                _TRISDbits 000F95            __pidataCOMRAM 7E24  
+   __end_of_teclado_getc 8000     __end_of_teclado_init 7E24      start_initialization 7E34  
+       __CFG_LPT1OSC$OFF 000000        teclado_getc@F5264 0015        teclado_getc@valor 0011  
+       __CFG_WDTPS$32768 000000    __size_of_teclado_getc 0134    __size_of_teclado_init 000C  
+              main@tecla 0014              _INTCON2bits 000FF1                copy_data0 7E48  
+           _teclado_getc 7ECC             _teclado_init 7E18                 __Hrparam 0000  
+               __Lrparam 0000            __size_of_main 006E    __CFG_CPUDIV$OSC1_PLL2 000000  

@@ -1,0 +1,6 @@
+_puertos: CODE, 198 0 26
+_main: CODE, 224 0 22
+__initialization: CODE, 246 0 4
+_ggdg: CODE, 8 0 164
+_timer: CODE, 172 0 26
+Total: 242

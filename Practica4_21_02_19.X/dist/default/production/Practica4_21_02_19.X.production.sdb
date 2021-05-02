@@ -1,0 +1,181 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"20 C:\Users\Emmanuel\MPLABXProjects\Practica4_21_02_19.X\Practica4_Prueba3.c
+[v _main main `(v  1 e 1 0 ]
+"90
+[v _display display `(v  1 e 1 0 ]
+"114
+[v _conteo conteo `(v  1 e 1 0 ]
+"162
+[v _seleccion seleccion `(i  1 e 2 0 ]
+[s S74 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+]
+"2353 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f4550.h
+[s S200 . 1 `uc 1 AN0 1 0 :1:0 
+`uc 1 AN1 1 0 :1:1 
+`uc 1 AN2 1 0 :1:2 
+`uc 1 AN3 1 0 :1:3 
+`uc 1 T0CKI 1 0 :1:4 
+`uc 1 AN4 1 0 :1:5 
+`uc 1 OSC2 1 0 :1:6 
+]
+[s S208 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 VREFM 1 0 :1:2 
+`uc 1 VREFP 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 LVDIN 1 0 :1:5 
+]
+[s S214 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 HLVDIN 1 0 :1:5 
+]
+[s S217 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+]
+[u S219 . 1 `S74 1 . 1 0 `S200 1 . 1 0 `S208 1 . 1 0 `S214 1 . 1 0 `S217 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES219  1 e 1 @3968 ]
+[s S35 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"2483
+[s S152 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 PGM 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
+]
+[s S160 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S163 . 1 `S35 1 . 1 0 `S152 1 . 1 0 `S160 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES163  1 e 1 @3969 ]
+[s S102 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"3100
+[s S111 . 1 `uc 1 LB0 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+`uc 1 LB2 1 0 :1:2 
+`uc 1 LB3 1 0 :1:3 
+`uc 1 LB4 1 0 :1:4 
+`uc 1 LB5 1 0 :1:5 
+`uc 1 LB6 1 0 :1:6 
+`uc 1 LB7 1 0 :1:7 
+]
+[u S120 . 1 `S102 1 . 1 0 `S111 1 . 1 0 ]
+[v _LATBbits LATBbits `VES120  1 e 1 @3978 ]
+"3263
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+[s S66 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+]
+"3457
+[u S82 . 1 `S66 1 . 1 0 `S74 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES82  1 e 1 @3986 ]
+[s S26 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"3657
+[u S44 . 1 `S26 1 . 1 0 `S35 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES44  1 e 1 @3987 ]
+"4001
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"6581
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"10 C:\Users\Emmanuel\MPLABXProjects\Practica4_21_02_19.X\Practica4_Prueba3.c
+[v _Tabla Tabla `[10]uc  1 e 10 0 ]
+"14
+[v _unidadesS1 unidadesS1 `i  1 e 2 0 ]
+"15
+[v _unidadesS2 unidadesS2 `i  1 e 2 0 ]
+"16
+[v _Decenas1 Decenas1 `i  1 e 2 0 ]
+"17
+[v _Decenas2 Decenas2 `i  1 e 2 0 ]
+"18
+[v _Dato Dato `s  1 e 2 0 ]
+"20
+[v _main main `(v  1 e 1 0 ]
+{
+"42
+[v main@sel sel `s  1 a 2 6 ]
+"41
+[v main@cont cont `s  1 a 2 4 ]
+"89
+} 0
+"162
+[v _seleccion seleccion `(i  1 e 2 0 ]
+{
+"170
+} 0
+"90
+[v _display display `(v  1 e 1 0 ]
+{
+[v display@veces veces `uc  1 a 1 wreg ]
+[v display@veces veces `uc  1 a 1 wreg ]
+[v display@veces veces `uc  1 a 1 1 ]
+"113
+} 0
+"114
+[v _conteo conteo `(v  1 e 1 0 ]
+{
+"116
+[v conteo@condicion2 condicion2 `s  1 a 2 2 ]
+"161
+} 0

@@ -1,0 +1,594 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production\I2C_Slave_2.X.production.o
+cinit CODE 0 11 11 D 2
+text1 CODE 0 3A7 3A7 78 2
+text2 CODE 0 560 560 53 2
+text3 CODE 0 601 601 46 2
+text4 CODE 0 5B3 5B3 4E 2
+text5 CODE 0 235 235 BC 2
+text6 CODE 0 174 174 C1 2
+text7 CODE 0 2F1 2F1 B6 2
+text8 CODE 0 647 647 1D 2
+text9 CODE 0 48A 48A 65 2
+text10 CODE 0 41F 41F 6B 2
+maintext CODE 0 1E 1E 156 2
+cstackCOMMON COMMON 1 70 70 B 1
+cstackBANK0 BANK0 1 3B 3B 12 1
+intentry CODE 0 4 4 A 2
+bssBANK0 BANK0 1 20 20 1B 1
+strings STRING 0 500 500 60 2
+clrtext CODE 0 664 664 8 2
+bssCOMMON COMMON 1 7B 7B 2 1
+$C:\Users\Emmanuel\AppData\Local\Temp\s6gg.o
+reset_vec CODE 0 0 0 3 2
+end_init CODE 0 E E 3 2
+config CONFIG 0 2007 2007 2 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 4D-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 4D-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 3-3 2
+CONST 4EF-4FF 2
+CONST 66C-1FFF 2
+ENTRY 3-3 2
+ENTRY 4EF-4FF 2
+ENTRY 66C-1FFF 2
+IDLOC 2000-2003 2
+STACK 110-16F 1
+CODE 3-3 2
+CODE 4EF-4FF 2
+CODE 66C-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+COMMON 7D-7D 1
+EEDATA 2100-21FF 2
+STRCODE 3-3 2
+STRCODE 4EF-4FF 2
+STRCODE 66C-1FFF 2
+STRING 3-3 2
+STRING 4EF-4FF 2
+STRING 66C-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\I2C_Slave_2.X.production.o
+11 cinit CODE >633:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+11 cinit CODE >636:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+11 cinit CODE >680:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+12 cinit CODE >681:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+13 cinit CODE >684:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+14 cinit CODE >685:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+15 cinit CODE >686:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+16 cinit CODE >687:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+17 cinit CODE >688:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+1A cinit CODE >694:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+1A cinit CODE >696:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+1B cinit CODE >697:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+4 intentry CODE >108:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+41F text10 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+41F text10 CODE >47:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+428 text10 CODE >48:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+431 text10 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+446 text10 CODE >50:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+447 text10 CODE >51:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+44F text10 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+451 text10 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+453 text10 CODE >54:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+458 text10 CODE >57:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+461 text10 CODE >58:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+468 text10 CODE >60:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+46C text10 CODE >62:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+46C text10 CODE >65:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+46F text10 CODE >63:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+478 text10 CODE >64:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+47A text10 CODE >62:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+47B text10 CODE >67:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+47E text10 CODE >68:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+489 text10 CODE >70:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+48A text9 CODE >108:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+48A text9 CODE >109:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+48C text9 CODE >110:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+48D text9 CODE >111:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+491 text9 CODE >112:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+498 text9 CODE >113:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+499 text9 CODE >114:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+49A text9 CODE >115:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+49B text9 CODE >117:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4A0 text9 CODE >118:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4A9 text9 CODE >119:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4AD text9 CODE >120:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4BC text9 CODE >121:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4BD text9 CODE >122:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4BE text9 CODE >123:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4BF text9 CODE >124:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4C2 text9 CODE >125:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4CB text9 CODE >126:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4CE text9 CODE >127:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4E1 text9 CODE >128:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4E2 text9 CODE >129:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4E6 text9 CODE >130:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4E6 text9 CODE >132:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4E8 text9 CODE >135:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+647 text8 CODE >1:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/I2C_Slave.h
+647 text8 CODE >3:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/I2C_Slave.h
+64B text8 CODE >4:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/I2C_Slave.h
+651 text8 CODE >5:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/I2C_Slave.h
+655 text8 CODE >6:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/I2C_Slave.h
+659 text8 CODE >7:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/I2C_Slave.h
+65A text8 CODE >8:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/I2C_Slave.h
+65B text8 CODE >9:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/I2C_Slave.h
+65C text8 CODE >10:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/I2C_Slave.h
+65D text8 CODE >11:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/I2C_Slave.h
+660 text8 CODE >12:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/I2C_Slave.h
+663 text8 CODE >14:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/I2C_Slave.h
+2F1 text7 CODE >150:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+2F4 text7 CODE >151:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+2F6 text7 CODE >152:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+31B text7 CODE >153:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+33C text7 CODE >154:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+343 text7 CODE >155:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+34F text7 CODE >156:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+374 text7 CODE >157:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+388 text7 CODE >158:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+38F text7 CODE >159:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+39B text7 CODE >160:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+3A6 text7 CODE >161:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+174 text6 CODE >52:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+174 text6 CODE >54:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+177 text6 CODE >55:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+178 text6 CODE >56:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+179 text6 CODE >57:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+17A text6 CODE >58:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+17B text6 CODE >59:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+17C text6 CODE >60:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+17F text6 CODE >61:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+180 text6 CODE >62:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+181 text6 CODE >63:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+182 text6 CODE >64:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+183 text6 CODE >65:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+184 text6 CODE >66:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+18F text6 CODE >67:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+19A text6 CODE >68:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+1A5 text6 CODE >69:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+1B0 text6 CODE >70:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+1BB text6 CODE >71:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+1C6 text6 CODE >72:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+1CA text6 CODE >74:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+1CF text6 CODE >75:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+1D4 text6 CODE >76:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+1D6 text6 CODE >77:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+1DC text6 CODE >78:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+1E3 text6 CODE >79:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+1E4 text6 CODE >80:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+1EF text6 CODE >81:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+1F9 text6 CODE >82:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+1FF text6 CODE >83:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+205 text6 CODE >84:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+20B text6 CODE >85:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+213 text6 CODE >86:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+21E text6 CODE >87:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+224 text6 CODE >88:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+22A text6 CODE >89:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+230 text6 CODE >90:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+234 text6 CODE >91:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+235 text5 CODE >136:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+238 text5 CODE >137:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+23A text5 CODE >138:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+25F text5 CODE >139:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+280 text5 CODE >140:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+287 text5 CODE >141:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+293 text5 CODE >142:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+2B8 text5 CODE >143:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+2CC text5 CODE >144:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+2D3 text5 CODE >145:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+2DF text5 CODE >146:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+2F0 text5 CODE >147:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+5B3 text4 CODE >94:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+5B6 text4 CODE >97:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+5B7 text4 CODE >99:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+5BA text4 CODE >100:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+5BD text4 CODE >101:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+5C0 text4 CODE >102:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+5C6 text4 CODE >104:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+5DC text4 CODE >105:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+5E2 text4 CODE >106:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+5EE text4 CODE >108:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+5FA text4 CODE >109:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+600 text4 CODE >106:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+601 text3 CODE >115:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+604 text3 CODE >118:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+605 text3 CODE >120:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+608 text3 CODE >121:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+60B text3 CODE >122:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+60E text3 CODE >123:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+614 text3 CODE >125:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+62A text3 CODE >126:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+630 text3 CODE >127:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+638 text3 CODE >129:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+640 text3 CODE >130:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+646 text3 CODE >127:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X/flex_lcd.h
+560 text2 CODE >500:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+563 text2 CODE >545:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+567 text2 CODE >548:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+577 text2 CODE >550:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+57B text2 CODE >553:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+57C text2 CODE >818:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+587 text2 CODE >828:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+592 text2 CODE >829:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+593 text2 CODE >841:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+5AD text2 CODE >548:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+5AE text2 CODE >1557:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+5B2 text2 CODE >1560:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+3A7 text1 CODE >136:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3A7 text1 CODE >137:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3AA text1 CODE >138:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3AC text1 CODE >139:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3B0 text1 CODE >140:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3B2 text1 CODE >141:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3B8 text1 CODE >142:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3BE text1 CODE >143:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3C4 text1 CODE >144:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3CA text1 CODE >145:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3CC text1 CODE >146:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3D2 text1 CODE >147:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3D8 text1 CODE >148:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3DE text1 CODE >149:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3E4 text1 CODE >150:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3E6 text1 CODE >151:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3EC text1 CODE >152:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3F2 text1 CODE >153:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3F8 text1 CODE >154:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+3FE text1 CODE >155:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+400 text1 CODE >156:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+406 text1 CODE >157:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+40C text1 CODE >158:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+412 text1 CODE >159:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+418 text1 CODE >160:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+418 text1 CODE >161:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+41A text1 CODE >162:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+1E maintext CODE >20:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+1E maintext CODE >21:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+28 maintext CODE >22:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+2D maintext CODE >23:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+33 maintext CODE >24:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+39 maintext CODE >25:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+48 maintext CODE >26:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4B maintext CODE >27:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+4C maintext CODE >28:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+50 maintext CODE >29:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+52 maintext CODE >30:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+53 maintext CODE >31:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+56 maintext CODE >32:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+57 maintext CODE >34:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+63 maintext CODE >35:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+71 maintext CODE >36:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+77 maintext CODE >37:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+86 maintext CODE >38:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+8C maintext CODE >39:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+91 maintext CODE >40:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+9F maintext CODE >41:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+AD maintext CODE >42:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+BB maintext CODE >43:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+BF maintext CODE >44:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+D0 maintext CODE >45:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+E1 maintext CODE >49:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+E3 maintext CODE >53:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+E5 maintext CODE >57:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+E7 maintext CODE >61:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+E9 maintext CODE >64:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+EB maintext CODE >68:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+ED maintext CODE >71:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+EF maintext CODE >75:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+F1 maintext CODE >79:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+F3 maintext CODE >80:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+F4 maintext CODE >83:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+F5 maintext CODE >84:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+FB maintext CODE >85:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+10A maintext CODE >88:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+10B maintext CODE >90:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+10F maintext CODE >94:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+113 maintext CODE >98:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+11F maintext CODE >87:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+12D maintext CODE >101:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+149 maintext CODE >104:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+173 maintext CODE >38:C:\Users\Emmanuel\MPLABXProjects\I2C_Slave_2.X\I2C_Slave_2.c
+664 clrtext CODE >667:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+664 clrtext CODE >668:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+665 clrtext CODE >669:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+665 clrtext CODE >670:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+666 clrtext CODE >671:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+667 clrtext CODE >672:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+668 clrtext CODE >673:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+669 clrtext CODE >674:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+66A clrtext CODE >675:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+66B clrtext CODE >676:C:\Users\Emmanuel\AppData\Local\Temp\s6gg.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_z 7B 0 COMMON 1 bssCOMMON dist/default/production\I2C_Slave_2.X.production.o
+___latbits 2 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__Hspace_0 2009 0 ABS 0 - -
+__Hspace_1 7D 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+_Lcd_Init 2E8 0 CODE 0 text6 dist/default/production\I2C_Slave_2.X.production.o
+_Lcd_Out2 C02 0 CODE 0 text3 dist/default/production\I2C_Slave_2.X.production.o
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+_BF 4A0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__end_of_Lcd_Init 46A 0 CODE 0 text6 dist/default/production\I2C_Slave_2.X.production.o
+__end_of_Lcd_Out2 C8E 0 CODE 0 text3 dist/default/production\I2C_Slave_2.X.production.o
+__Hstrings 0 0 ABS 0 strings -
+_PEIE 5E 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\Emmanuel\AppData\Local\Temp\s6gg.o
+_main 3C 0 CODE 0 maintext dist/default/production\I2C_Slave_2.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+Lcd_Out2@x 44 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+Lcd_Out2@y 48 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+start 1C 0 CODE 0 init C:\Users\Emmanuel\AppData\Local\Temp\s6gg.o
+__size_of___fltol 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__size_of_main 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__Hpowerup 0 0 CODE 0 powerup -
+__size_of_I2C_Slave2_ 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Emmanuel\AppData\Local\Temp\s6gg.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Emmanuel\AppData\Local\Temp\s6gg.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Emmanuel\AppData\Local\Temp\s6gg.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Emmanuel\AppData\Local\Temp\s6gg.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Emmanuel\AppData\Local\Temp\s6gg.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Emmanuel\AppData\Local\Temp\s6gg.o
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+Lcd_Chr_CP@data 43 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+wtemp0 7E 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+_Lcd_Chr_CP 46A 0 CODE 0 text5 dist/default/production\I2C_Slave_2.X.production.o
+__Hfunctab 0 0 ENTRY 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+_ANSELH 189 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+_SSPCONbits 14 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__Lmaintext 0 0 ABS 0 maintext -
+__size_of_sprintf 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+Lcd_Out2@buffer 45 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+__end_of___fltol 914 0 CODE 0 text10 dist/default/production\I2C_Slave_2.X.production.o
+_OPTION_REG 81 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\Emmanuel\AppData\Local\Temp\s6gg.o
+___stacklo 0 0 ABS 0 - C:\Users\Emmanuel\AppData\Local\Temp\s6gg.o
+__end_of_Lcd_Chr_CP 5E2 0 CODE 0 text5 dist/default/production\I2C_Slave_2.X.production.o
+_I2C_Slave_Init C8E 0 CODE 0 text8 dist/default/production\I2C_Slave_2.X.production.o
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+start_initialization 22 0 CODE 0 cinit dist/default/production\I2C_Slave_2.X.production.o
+_Promedio 24 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave_2.X.production.o
+_TRISCbits 87 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+_TRISDbits 88 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+clear_ram0 CC8 0 CODE 0 clrtext dist/default/production\I2C_Slave_2.X.production.o
+__pcstackBANK0 3B 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+_SSPADD 93 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+_SSPBUF 13 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+_SSPCON 14 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__size_of_Lcd_Cmd 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__size_of_Lcd_Out 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\Emmanuel\AppData\Local\Temp\s6gg.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hcinit 3C 0 CODE 0 cinit -
+__end_of_I2C_Slave_Init CC8 0 CODE 0 text8 dist/default/production\I2C_Slave_2.X.production.o
+__Hidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__stringbase A0A 0 STRING 0 strings dist/default/production\I2C_Slave_2.X.production.o
+__Hmaintext 0 0 ABS 0 maintext -
+Lcd_Out@data 49 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+__end_of_sprintf B66 0 CODE 0 text2 dist/default/production\I2C_Slave_2.X.production.o
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4012 0 CONFIG 0 config -
+__size_of_teclado 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lcinit 22 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lstack 0 0 STACK 2 stack -
+_I2C_Slave2_ 914 0 CODE 0 text9 dist/default/production\I2C_Slave_2.X.production.o
+_PORTBbits 6 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+_PORTDbits 8 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 1C 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 1C 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_GIE 5F 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__S0 2009 0 ABS 0 - -
+__S1 7D 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__CFG_BOR4V$BOR40V 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+saved_w 7E 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__Lintentry 8 0 CODE 0 intentry -
+__stringtab A00 0 STRING 0 strings dist/default/production\I2C_Slave_2.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Emmanuel\AppData\Local\Temp\s6gg.o
+__end_of_Lcd_Cmd 74E 0 CODE 0 text7 dist/default/production\I2C_Slave_2.X.production.o
+__end_of_Lcd_Out C02 0 CODE 0 text4 dist/default/production\I2C_Slave_2.X.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__size_of_Lcd_Chr_CP 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__ptext10 83E 0 CODE 0 text10 dist/default/production\I2C_Slave_2.X.production.o
+___fltol 83E 0 CODE 0 text10 dist/default/production\I2C_Slave_2.X.production.o
+__pmaintext 3C 0 CODE 0 maintext dist/default/production\I2C_Slave_2.X.production.o
+__end_of_teclado 83E 0 CODE 0 text1 dist/default/production\I2C_Slave_2.X.production.o
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 400E 0 CONFIG 0 config -
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+I2C_Slave_Init@address 41 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+Lcd_Out@buffer 45 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+__end_of__stringtab A0C 0 STRING 0 strings dist/default/production\I2C_Slave_2.X.production.o
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__pbssCOMMON 7B 0 COMMON 1 bssCOMMON dist/default/production\I2C_Slave_2.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_palabra2 2A 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave_2.X.production.o
+__Lend_init 1C 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+___fltol@exp1 7A 0 COMMON 1 cstackCOMMON dist/default/production\I2C_Slave_2.X.production.o
+end_of_initialization 34 0 CODE 0 cinit dist/default/production\I2C_Slave_2.X.production.o
+__Hintentry 1C 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+?___fltol 70 0 COMMON 1 cstackCOMMON dist/default/production\I2C_Slave_2.X.production.o
+__Hreset_vec 6 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+_caracter 28 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave_2.X.production.o
+__ptext1 74E 0 CODE 0 text1 dist/default/production\I2C_Slave_2.X.production.o
+__ptext2 AC0 0 CODE 0 text2 dist/default/production\I2C_Slave_2.X.production.o
+__ptext3 C02 0 CODE 0 text3 dist/default/production\I2C_Slave_2.X.production.o
+__ptext4 B66 0 CODE 0 text4 dist/default/production\I2C_Slave_2.X.production.o
+__ptext5 46A 0 CODE 0 text5 dist/default/production\I2C_Slave_2.X.production.o
+__ptext6 2E8 0 CODE 0 text6 dist/default/production\I2C_Slave_2.X.production.o
+__ptext7 5E2 0 CODE 0 text7 dist/default/production\I2C_Slave_2.X.production.o
+__ptext8 C8E 0 CODE 0 text8 dist/default/production\I2C_Slave_2.X.production.o
+__ptext9 914 0 CODE 0 text9 dist/default/production\I2C_Slave_2.X.production.o
+_sprintf AC0 0 CODE 0 text2 dist/default/production\I2C_Slave_2.X.production.o
+Lcd_Out2@data 49 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+Lcd_Cmd@data 43 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+sprintf@ap 47 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+sprintf@sp 49 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+___fltol@sign1 79 0 COMMON 1 cstackCOMMON dist/default/production\I2C_Slave_2.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__CFG_FOSC$HS 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+___fltol@f1 70 0 COMMON 1 cstackCOMMON dist/default/production\I2C_Slave_2.X.production.o
+__end_of__initialization 34 0 CODE 0 cinit dist/default/production\I2C_Slave_2.X.production.o
+__size_of_I2C_Slave_Init 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__Lfunctab 0 0 ENTRY 0 functab -
+Lcd_Out@x 44 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+Lcd_Out@y 48 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+__end_of_I2C_Slave2_ 9DE 0 CODE 0 text9 dist/default/production\I2C_Slave_2.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext -
+__CFG_PWRTE$ON 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\I2C_Slave_2.X.production.o
+_SSPCON2 91 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+_SSPSTAT 94 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+Lcd_Init@data 46 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+__size_of_Lcd_Init 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__size_of_Lcd_Out2 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__Hend_init 22 0 CODE 0 end_init -
+sprintf@c 48 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+sprintf@f 41 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+__end_of_main 2E8 0 CODE 0 maintext dist/default/production\I2C_Slave_2.X.production.o
+_ANSEL 188 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+?_sprintf 41 0 BANK0 1 cstackBANK0 dist/default/production\I2C_Slave_2.X.production.o
+_PORTA 5 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+_PORTB 6 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+_SSPIE 463 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+_SSPIF 63 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+_SSPM3 A3 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+_TRISA 85 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+_TRISB 86 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+interrupt_function 8 0 CODE 0 intentry dist/default/production\I2C_Slave_2.X.production.o
+_datos 20 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave_2.X.production.o
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+_valor 29 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave_2.X.production.o
+_SSPSTATbits 94 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__pintentry 8 0 CODE 0 intentry dist/default/production\I2C_Slave_2.X.production.o
+_Lcd_Cmd 5E2 0 CODE 0 text7 dist/default/production\I2C_Slave_2.X.production.o
+_Lcd_Out B66 0 CODE 0 text4 dist/default/production\I2C_Slave_2.X.production.o
+__initialization 22 0 CODE 0 cinit dist/default/production\I2C_Slave_2.X.production.o
+__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\I2C_Slave_2.X.production.o
+__CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\I2C_Slave_2.X.production.o
+__pstrings A00 0 STRING 0 strings dist/default/production\I2C_Slave_2.X.production.o
+_teclado 74E 0 CODE 0 text1 dist/default/production\I2C_Slave_2.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text2 0 560 AC0 10C 2
+cstackCOMMON 1 70 70 D 1
+intentry 0 4 8 4EB 2
+reset_vec 0 0 0 3 2
+bssBANK0 1 20 20 2D 1
+strings 0 500 A00 60 2
+config 0 2007 400E 2 2
